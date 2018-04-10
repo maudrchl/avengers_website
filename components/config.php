@@ -1,13 +1,15 @@
 <?php
+
 //API KEYS
 define('MOVIEDB_KEY', '17585dc135dd3774be90d8e921d64fd1');
 define('SUPERHERO_KEY', '1573083546094106');
 
 $id_list = [
     array(
-        'hero'=> 
-    )
-    ]
+        'hero' => 346,
+        'actor' => 3223,
+    ),
+];
 
 //API's call functions
 function getActorInfos($actor_id)
@@ -16,7 +18,7 @@ function getActorInfos($actor_id)
     while($actor_infos == '')
     {
         $actor_infos_url = 'https://api.themoviedb.org/3/person/'.$actor_id.'?api_key='.MOVIEDB_KEY.'&language=en-US'; // name, description, birthday
-        $path = './components/cache/'.md5($actor_infos_url);
+        $path = './cache/'.md5($actor_infos_url);
 
         if(file_exists($path) && time()-filemtime($path) < 3600)
         {
@@ -33,7 +35,7 @@ function getActorInfos($actor_id)
     while($actor_credits == '')
     {
         $actor_credits_url = 'https://api.themoviedb.org/3/person/'.$actor_id.'/movie_credits?api_key='.MOVIEDB_KEY.'&language=en-US'; // other roles he played
-        $path = './components/cache/'.md5($actor_credits_url);
+        $path = './cache/'.md5($actor_credits_url);
 
         if(file_exists($path) && time()-filemtime($path) < 3600)
         {
@@ -62,7 +64,7 @@ function getHeroInfos($hero_id)
     while($hero_infos == '')
     {
         $hero_infos_url = 'http://superheroapi.com/api/'.SUPERHERO_KEY.'/'.$hero_id.'/biography';
-        $path = './components/cache/'.md5($hero_infos_url);
+        $path = './cache/'.md5($hero_infos_url);
 
         if(file_exists($path) && time() - filemtime($path) < 3600) // check cache
         {
