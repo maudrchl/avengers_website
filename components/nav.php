@@ -1,8 +1,3 @@
-<?php
-    include 'header.php';
-    include 'footer.php';
-?>
-
 <div class="nav">
     <div class="nav-item item1">
         <div class="line"></div>
