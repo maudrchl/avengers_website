@@ -37,5 +37,7 @@
     <span class="discover">discover</span>
     
     </body>
-    <script src="script/script.js"></script>
+
+    <script src="script/Nav.js"></script>
+    <script src="script/main.js"></script>
 </html>

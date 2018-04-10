@@ -9,7 +9,7 @@
 
     $doc_title = $hero_infos->name;
 
-    include('header.php');
+    include('nav.php');
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +23,10 @@
     <link rel="stylesheet" href="../style/style.css">
 </head>
 <body class="hero-page">
+    <nav class="bars">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+    </nav>
     <ul class="hero-nav">
         <?php for($hero_id = 0; $hero_id<count($id_list); $hero_id++){ 
             $hero_name = getHeroInfos($id_list[$hero_id]['hero'])->name?>

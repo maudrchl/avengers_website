@@ -1,4 +1,3 @@
 if(Nav){
-    nav = new Nav()
+    const nav = new Nav()
 }
-
