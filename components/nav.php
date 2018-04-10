@@ -1,8 +1,3 @@
-<?php
-    include 'header.php';
-    include 'footer.php';
-?>
-
 <div class="nav">
     <div class="nav-item item1">
         <div class="line"></div>
@@ -12,7 +7,7 @@
     <div class="nav-item">
         <div class="line"></div>
         <span class="number">02</span>
-        <p class="title">Characters &amp Cast</span>
+        <p class="title">Characters &amp; Cast</span>
     </div>
     <div class="nav-item">
         <div class="line"></div>
