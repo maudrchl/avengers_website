@@ -15,8 +15,8 @@
     <h2>Infinity War</h2>
     <h1>Avengers</h1>
     <div class="red_block"></div>
-    <h3>Release on</h3>
-    <h3 class="date">25 april</h3>
+    <h3 class="release">Release on</h3>
+    <h3 class="release date">25 april</h3>
 </div>
 <div class="circle"></div>
 <img src=images/arrow.svg class="arrow" width=200px>
