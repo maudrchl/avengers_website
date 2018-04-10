@@ -1,2 +1,17 @@
 @import 'variables';
+@import 'home.scss';
+@import 'nav.scss';
 
+@font-face {
+    font-family: Gotham_Bold;
+    src: url(../../fonts/Gotham-Bold.otf);
+}
+@font-face {
+    font-family: Gotham_Book;
+    src: url(../../fonts/Gotham-Book.otf);
+}
+
+@font-face {
+    font-family: Trade;
+    src: url(../fonts/Trade.otf);
+}

@@ -5,9 +5,9 @@ define('SUPERHERO_KEY', '1573083546094106');
 
 $id_list = [
     array(
-        'hero'=> 
+        'hero'=> "oui"
     )
-    ]
+    ];
 
 //API's call functions
 function getActorInfos($actor_id)

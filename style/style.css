@@ -1,0 +1,19 @@
+h1 {
+  font-family: Trade, Arial; }
+
+.bar1 {
+  width: 30px;
+  height: 10px;
+  background: black; }
+
+@font-face {
+  font-family: Gotham_Bold;
+  src: url(../../fonts/Gotham-Bold.otf); }
+@font-face {
+  font-family: Gotham_Book;
+  src: url(../../fonts/Gotham-Book.otf); }
+@font-face {
+  font-family: Trade;
+  src: url(../fonts/Trade.otf); }
+
+/*# sourceMappingURL=style.css.map */
