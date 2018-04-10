@@ -23,8 +23,15 @@
     <link rel="stylesheet" href="../style/style.css">
 </head>
 <body class="hero-page">
-    <nav class="hero-nav">
-    </nav>
+    <ul class="hero-nav">
+        <?php for($hero_id = 0; $hero_id<count($id_list); $hero_id++){ 
+            $hero_name = getHeroInfos($id_list[$hero_id]['hero'])->name?>
+            <li <?= $hero_id != $id ? '' : 'class=active' ?>>
+                <a href="./heros.php?id=<?= $hero_id?>"></a>
+                <span><?= $hero_name ?></span>
+            </li>
+        <?php }?>
+    </ul> 
     <div class="hero-image">
         <img class="normal-image" src="../images/hero_actor/hero_<?= $id?>.png" alt="<?= $hero_infos->name?>">
         <img class="color-image-1" src="../images/hero_actor/hero_<?= $id?>.png" alt="<?= $hero_infos->name?>">
@@ -52,6 +59,7 @@
             </div>
         </div>
     <div class="red-background"></div>
+    <script src="../script/script.js"></script>
 </body>
 </html>
 
