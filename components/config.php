@@ -3,6 +3,11 @@
 define('MOVIEDB_KEY', '17585dc135dd3774be90d8e921d64fd1');
 define('SUPERHERO_KEY', '1573083546094106');
 
+$id_list = [
+    array(
+        'hero'=> 
+    )
+    ]
 
 //API's call functions
 function getActorInfos($actor_id)
