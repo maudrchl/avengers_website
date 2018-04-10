@@ -2,6 +2,7 @@
     include "components/config.php";
     include "components/header.php";
     include "components/footer.php";
+    include "components/nav.php";
     // include "components/nav.php";
 ?>
 
