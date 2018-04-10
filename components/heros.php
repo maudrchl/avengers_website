@@ -1,5 +1,6 @@
 <?php
     include('config.php');
+    include('requests.php');
 
     $id = $_GET['id'];
 
