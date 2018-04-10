@@ -59,7 +59,8 @@
             </div>
         </div>
     <div class="red-background"></div>
-    <script src="../script/script.js"></script>
+    <script src="../script/Nav.js"></script>
+    <script src="../script/main.js"></script>
 </body>
 </html>
 

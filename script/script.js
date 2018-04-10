@@ -6,3 +6,4 @@ nav.addEventListener('click', () =>
 {
     nav_window.transform.translate("3000px");
 })
+
