@@ -1,10 +1,21 @@
 h1 {
   font-family: Trade, Arial; }
 
+nav {
+  position: absolute;
+  top: 100px;
+  left: 100px; }
+
 .bar1 {
-  width: 30px;
-  height: 10px;
+  width: 50px;
+  height: 5px;
   background: black; }
+
+.bar2 {
+  width: 30px;
+  height: 5px;
+  background: black;
+  margin-top: 5px; }
 
 @font-face {
   font-family: Gotham_Bold;
@@ -15,5 +26,3 @@ h1 {
 @font-face {
   font-family: Trade;
   src: url(../fonts/Trade.otf); }
-
-/*# sourceMappingURL=style.css.map */
