@@ -2,6 +2,12 @@ body.hero-page{
     height: 100vh;
     overflow: hidden;
 
+    nav{
+        .bar1, .bar2{
+            background: $black !important;
+        }
+    }
+
     .red-background{
         z-index: 0;
         position: absolute;
@@ -12,6 +18,68 @@ body.hero-page{
         background: $red;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 10vw 100%);
         
+    }
+
+    .hero-nav{
+        position: absolute;
+        top: 50%;
+        left: 100px;
+        transform: translateY(-50%);
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        li{
+            margin: 8px 0;
+            display: flex;
+            align-items: center;
+
+            a{
+                position: relative;
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border-radius: 6px;
+                border: solid $black 2px;
+
+                &:before{
+                    position: absolute;
+                    top: -1px;
+                    left: -1px;
+                    display: inline-block;
+                    background: $black;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 6px;
+                    transform: scale(0);
+                    will-change: transform;
+                    transition: transform 0.4s ease;
+                    content: " ";
+                }
+            }
+
+            span{
+                display: inline-block;
+                font-family: $trade;
+                margin-left: 10px;
+                transform: translateX(-5px);
+                will-change: transform, opacity;
+                transition: transform 0.4s ease-out, opacity 0.3s ease;
+                opacity: 0;
+            }
+
+            &.active, &:hover{
+                span{
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+
+                a:before{
+                    transform: scale(1);
+                }
+            }
+        }
     }
 
     .hero-image{
@@ -76,7 +144,7 @@ body.hero-page{
 
         h3{
             font-size: 24px;
-            margin-top: 80px;
+            margin-top: 60px;
             padding-left: 10vw;
             font-family: Gotham_Book, Arial;
         }

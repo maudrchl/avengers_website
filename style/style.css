@@ -175,6 +175,8 @@ nav:hover .bar2 {
 body.hero-page {
   height: 100vh;
   overflow: hidden; }
+  body.hero-page nav .bar1, body.hero-page nav .bar2 {
+    background: #0F0F0F !important; }
   body.hero-page .red-background {
     z-index: 0;
     position: absolute;
@@ -184,6 +186,52 @@ body.hero-page {
     width: 20vw;
     background: #BF1112;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 10vw 100%); }
+  body.hero-page .hero-nav {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    transform: translateY(-50%);
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    body.hero-page .hero-nav li {
+      margin: 8px 0;
+      display: flex;
+      align-items: center; }
+      body.hero-page .hero-nav li a {
+        position: relative;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 6px;
+        border: solid #0F0F0F 2px; }
+        body.hero-page .hero-nav li a:before {
+          position: absolute;
+          top: -1px;
+          left: -1px;
+          display: inline-block;
+          background: #0F0F0F;
+          width: 8px;
+          height: 8px;
+          border-radius: 6px;
+          transform: scale(0);
+          will-change: transform;
+          transition: transform 0.4s ease;
+          content: " "; }
+      body.hero-page .hero-nav li span {
+        display: inline-block;
+        font-family: Trade, Arial;
+        margin-left: 10px;
+        transform: translateX(-5px);
+        will-change: transform, opacity;
+        transition: transform 0.4s ease-out, opacity 0.3s ease;
+        opacity: 0; }
+      body.hero-page .hero-nav li.active span, body.hero-page .hero-nav li:hover span {
+        transform: translateX(0);
+        opacity: 1; }
+      body.hero-page .hero-nav li.active a:before, body.hero-page .hero-nav li:hover a:before {
+        transform: scale(1); }
   body.hero-page .hero-image {
     z-index: 200;
     position: absolute;
@@ -229,7 +277,7 @@ body.hero-page {
       text-transform: uppercase; }
     body.hero-page .content h3 {
       font-size: 24px;
-      margin-top: 80px;
+      margin-top: 60px;
       padding-left: 10vw;
       font-family: Gotham_Book, Arial; }
     body.hero-page .content p {
