@@ -1,14 +1,14 @@
 @import 'variables';
-@import 'home.scss';
-@import 'nav.scss';
+@import 'home';
+@import 'nav';
 
 @font-face {
     font-family: Gotham_Bold;
-    src: url(../../fonts/Gotham-Bold.otf);
+    src: url(../fonts/Gotham-Bold.otf);
 }
 @font-face {
     font-family: Gotham_Book;
-    src: url(../../fonts/Gotham-Book.otf);
+    src: url(../fonts/Gotham-Book.otf);
 }
 
 @font-face {
