@@ -83,13 +83,13 @@ body.hero-page{
     }
 
     .hero-image{
-        z-index: 200;
+        z-index: 80;
         position: absolute;
         top: 15vh;
         left: 40vw;
-        height: 150vh;
+        height: calc(100% - 15vh);
         will-change: transform;
-        transition: transform, 0.4s ease-in-out;
+        transition: transform, 0.6s cubic-bezier(0.7, 0.09, 0.26, 0.94);
 
         img{
             height: 100%;
@@ -113,7 +113,7 @@ body.hero-page{
         }
 
         &:hover{
-            transform: scale(1.05) translateY(20px);
+            transform: scale(1.05);
 
             .color-image-1{
                 clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
@@ -121,25 +121,45 @@ body.hero-page{
 
             .color-image-2{
                 clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-                transition: clip-path 1s ease-in-out;
+                transition: clip-path 1s cubic-bezier(0.7, 0.09, 0.26, 0.94) 0.2s;
+            }
+        }
+
+        &.js-character{
+            &.hidden{
+                transform: translateX(-60vw);
+            }
+        }
+
+        &.js-actor{
+            &.hidden{
+                transform: translateX(80vw);
             }
         }
     }
 
     .content{
-        z-index: 100;
+        z-index: 20;
         position: absolute;
         width: 60vw;
         height: 100%;
-        padding: 15vh 10vw;
+        padding: 15vh 10vw calc(15vh + 60px) 10vw;
         right: 0;
         background: $black;
         color: #ffffff;
+        overflow-x: hidden;
 
-        h1{
-            font-size: $title;
-            font-family: $trade;
-            text-transform: uppercase;
+        .name-container{
+            overflow-y: hidden;
+
+            h1{
+                font-size: $title;
+                font-family: $trade;
+                text-transform: uppercase;
+                will-change: transform;
+                transition: transform 0.4s cubic-bezier(0.7, 0.09, 0.26, 0.94);
+                text-align: left;
+            }
         }
 
         h3{
@@ -147,6 +167,8 @@ body.hero-page{
             margin-top: 60px;
             padding-left: 10vw;
             font-family: Gotham_Book, Arial;
+            will-change: transform;
+            transition: transform 0.4s cubic-bezier(0.7, 0.09, 0.26, 0.94) 0.2s;
         }
 
         p{
@@ -155,22 +177,62 @@ body.hero-page{
             padding-left: 10vw;
             line-height: 25px;
             font-family: Gotham_Book, Arial;
+            will-change: transform;
+            transition: transform 0.4s cubic-bezier(0.7, 0.09, 0.26, 0.94) 0.4s;
         }
 
         p.main-text{
             margin-bottom: 20px;
+            will-change: transform;
         }
+
+        &.js-character{
+            &.hidden{
+                h3, p {
+                    transform: translateX(50vw);
+                }
+    
+                h1{
+                    transform: translateY(-100%);
+                }
+            }
+        }
+
+        &.js-actor{
+            background: none;
+
+            &.hidden{
+                h3, p {
+                    transform: translateX(-50vw);
+                }
+
+                h1{
+                    transform: translateY(100%);
+                }
+            }
+        }
+    }
+
+    .bottom-gradient{
+        position: absolute;
+        z-index: 40;
+        width: 60vw;
+        right: 0;
+        bottom: 0;
+        padding-bottom: 15vh;
+        padding-top: 80px;
+        background: linear-gradient(rgba(15,15,15,0), rgba(15,15,15,1) 40px);
     }
 
     .buttons-container{
         position: absolute;
-        z-index: 300;
+        z-index: 50;
         width: 30vw;
         right: 10vw;
-        bottom: 15vh;
+        bottom: 0;
+        padding-bottom: 15vh;
         display: flex;
         justify-content: center;
-        margin-top: 80px;
 
         .switch-hero{
             width: 110px;

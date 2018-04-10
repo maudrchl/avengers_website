@@ -83,7 +83,7 @@ function getActorInfos($actor_id)
         'id' => $actor_infos->id,
         'name' => $actor_infos->name,
         'bio' => $actor_infos->biography,
-        'cast' => $actor_credits->cast,
+        'cast' => $actor_credits->cast[0]->title.', '.$actor_credits->cast[1]->title.', '.$actor_credits->cast[2]->title,
     ); // selected data
 
     return $result;
