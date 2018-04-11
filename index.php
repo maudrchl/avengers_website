@@ -39,7 +39,7 @@
         <h3 class="release">Release on</h3>
         <h3 class="release date">25 april</h3>
     </div>
-    <div class="circle"></div>
+    <a href="components/gallery.php"><div class="circle"></div></a>
     <img src=images/arrow.svg class="arrow" width=200px>
     <span class="discover">discover</span>
     

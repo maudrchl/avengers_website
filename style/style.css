@@ -204,9 +204,9 @@ body.hero-page {
     top: 0;
     left: 20vw;
     height: 100%;
-    width: 20vw;
+    width: 40vw;
     background: #EE0000;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 10vw 100%); }
+    transform: skewX(4deg) translateX(60px); }
   body.hero-page .hero-nav {
     position: absolute;
     top: 50%;
@@ -348,7 +348,7 @@ body.hero-page {
     z-index: 50;
     width: 30vw;
     right: 10vw;
-    bottom: 0;
+    bottom: -70px;
     padding-bottom: 15vh;
     display: flex;
     justify-content: center; }

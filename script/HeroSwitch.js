@@ -11,6 +11,8 @@ class HeroSwitch{
         this.characterElements = document.querySelectorAll('.js-character')
         this.actorElements = document.querySelectorAll('.js-actor')
 
+        this.background = document.querySelector('.red-background')
+
         this.event()
     }
 
@@ -43,5 +45,11 @@ class HeroSwitch{
         }
         this.characterButton.classList.add('active')
         this.actorButton.classList.remove('active')
+    }
+
+    changeBackground(){
+        
+        this.background.style.transform = skew("-10deg")
+
     }
 }
