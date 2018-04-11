@@ -60,6 +60,7 @@ nav:hover .bar2
     left: 0;
     top: 0;
     z-index: 300;
+    transform: translateX(-3000px);
 }
 
 .item1
@@ -84,7 +85,7 @@ nav:hover .bar2
 
 .number 
 {
-    color: #EE0000;
+    color: $red;
     font-family: Gotham_Bold, Arial;
     margin-left: 200px;
 }
@@ -98,9 +99,14 @@ nav:hover .bar2
     margin-top: 20px;
 }
 
+.title a
+{
+    text-decoration: none;
+}
+
 .join
 {
-    color: #EE0000;
+    color: $red;
     font-family: Gotham_Bold, Arial;
     font-size: 18px;
     position: absolute;
