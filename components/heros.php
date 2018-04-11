@@ -1,6 +1,7 @@
 <?php
     include('config.php');
     include('requests.php');
+    include('nav.php');
 
     $id = $_GET['id'];
 
@@ -8,8 +9,6 @@
     $actor_infos = getActorInfos($id_list[$id]['actor']);
 
     $doc_title = $hero_infos->name;
-
-    include('nav.php');
 ?>
 
 <!DOCTYPE html>
@@ -35,19 +34,40 @@
                 <span><?= $hero_name ?></span>
             </li>
         <?php }?>
-    </ul> 
-    <div class="hero-image">
+    </ul>
+    <!-- hero content -->
+    <div class="hero-image js-character">
         <img class="normal-image" src="../images/hero_actor/hero_<?= $id?>.png" alt="<?= $hero_infos->name?>">
         <img class="color-image-1" src="../images/hero_actor/hero_<?= $id?>.png" alt="<?= $hero_infos->name?>">
         <img class="color-image-2" src="../images/hero_actor/hero_<?= $id?>.png" alt="<?= $hero_infos->name?>">
     </div>
-    <div class="content">
-        <h1><?= $hero_infos->name?></h1>
+    <div class="content js-character">
+        <div class="name-container">
+            <h1><?= $hero_infos->name?></h1>
+        </div>
         <h3>Played by <?= $actor_infos->name?></h3>
         <p class="main-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ducimus incidunt dignissimos animi esse amet autem, quasi omnis placeat impedit voluptate possimus eum earum aliquam repellat illum, pariatur commodi dolorum!</p>
         <p>PLACE OF BIRTH : <?= $hero_infos->birth?></p>
         <p>FIRST APPEARANCE : <?= $hero_infos->origin?></p>
     </div>
+    <!-- actor content -->
+    <div class="hero-image js-actor hidden">
+        <img class="normal-image" src="../images/hero_actor/actor_<?= $id?>.png" alt="<?= $hero_infos->name?>">
+        <img class="color-image-1" src="../images/hero_actor/actor_<?= $id?>.png" alt="<?= $hero_infos->name?>">
+        <img class="color-image-2" src="../images/hero_actor/actor_<?= $id?>.png" alt="<?= $hero_infos->name?>">
+    </div>
+    <div class="content js-actor hidden">
+        <div class="name-container">
+            <h1><?= $actor_infos->name?></h1>
+        </div>
+        <h3>Playing as <?= $hero_infos->name?></h3>
+        <p class="main-text"><?= $actor_infos->bio?></p>
+        <p>OTHER MOVIES : <?= $actor_infos->cast?></p>
+        <p>ANECDOTE : At 16, Robert Downey Jr once pulled the comic out of the hands of one of his comrades, calling him a geek by the way, which earned him a suspension from his high school. The comics this student read was "The Invincible Iron Man". The irony of life...</p>
+    </div>
+
+    <div class="bottom-gradient"></div>
+    
     <div class="buttons-container">
             <div class="switch-hero active">
                 <div class="bar">
@@ -62,8 +82,12 @@
                 <span class="switch-link">actor</span>
             </div>
         </div>
+    </div>
+
     <div class="red-background"></div>
+
     <script src="../script/Nav.js"></script>
+    <script src="../script/HeroSwitch.js"></script>
     <script src="../script/main.js"></script>
 </body>
 </html>
