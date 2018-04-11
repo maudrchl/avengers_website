@@ -1,4 +1,4 @@
-body {
+body.homepage {
   overflow: hidden; }
 
 .background_video {
@@ -105,7 +105,8 @@ nav {
   height: 20px;
   cursor: pointer;
   transition: transform 0.5s ease-in-out;
-  z-index: 300; }
+  z-index: 300;
+  mix-blend-mode: exclusion; }
 
 .bar1 {
   width: 50px;
@@ -144,14 +145,15 @@ nav:hover .bar2 {
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 300; }
+  z-index: 300;
+  transform: translateX(-3000px); }
 
 .item1 {
-  padding-top: 5%; }
+  padding-top: 30px; }
 
 .nav-item {
   margin-left: 300px;
-  margin-top: 70px; }
+  margin-top: 50px; }
 
 .line {
   margin-top: 20px;
@@ -171,6 +173,9 @@ nav:hover .bar2 {
   font-size: 36px;
   margin-left: 200px;
   margin-top: 20px; }
+
+.title a {
+  text-decoration: none; }
 
 .join {
   color: #EE0000;
@@ -200,7 +205,7 @@ body.hero-page {
     left: 20vw;
     height: 100%;
     width: 20vw;
-    background: #BF1112;
+    background: #EE0000;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 10vw 100%); }
   body.hero-page .hero-nav {
     position: absolute;
@@ -363,7 +368,7 @@ body.hero-page {
         height: 100%;
         top: 0;
         left: 0;
-        background: #BF1112;
+        background: #EE0000;
         transform-origin: left;
         transform: scaleX(0);
         will-change: transform;
@@ -379,11 +384,158 @@ body.hero-page {
       body.hero-page .buttons-container .switch-hero.active .fill-bar {
         transform: scaleX(1); }
       body.hero-page .buttons-container .switch-hero.active .switch-link {
-        color: #BF1112; }
+        color: #EE0000; }
       body.hero-page .buttons-container .switch-hero:hover .fill-bar {
         transform: scaleX(1); }
       body.hero-page .buttons-container .switch-hero:hover .switch-link {
-        color: #BF1112; }
+        color: #EE0000; }
+
+.test {
+  margin: 0;
+  width: 5200px;
+  overflow: hidden;
+  height: 100%;
+  position: absolute;
+  z-index: 2; }
+
+.bck-img {
+  z-index: 3;
+  width: 5200px;
+  position: absolute;
+  top: -10px;
+  left: -10px; }
+
+.gallery {
+  position: absolute;
+  margin: 0;
+  top: 0;
+  width: 5200px;
+  overflow: scroll;
+  height: 100%; }
+
+.gallery_hero {
+  width: 480px;
+  position: absolute;
+  will-change: all;
+  filter: grayscale(100%); }
+
+.hero_0 {
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  bottom: 0; }
+
+.hero_1 {
+  left: 300px;
+  top: -50px;
+  z-index: 4; }
+
+.hero_2 {
+  left: 700px;
+  bottom: 0;
+  z-index: 20; }
+
+.hero_3 {
+  left: 4200px;
+  bottom: 0;
+  width: 400px;
+  z-index: 4; }
+
+.hero_4 {
+  left: 900px;
+  bottom: 0;
+  width: 800px;
+  z-index: 5; }
+
+.hero_5 {
+  left: 1400px;
+  bottom: -200px;
+  width: 600px;
+  z-index: 4; }
+
+.hero_6 {
+  left: 1700px;
+  bottom: 0;
+  width: 600px;
+  z-index: 3; }
+
+.hero_7 {
+  left: 2300px;
+  bottom: 0;
+  width: 500px;
+  z-index: 3; }
+
+.hero_8 {
+  left: 2500px;
+  bottom: 0;
+  width: 600px;
+  z-index: 3; }
+
+.hero_9 {
+  left: 3000px;
+  bottom: 0;
+  width: 900px;
+  z-index: 3; }
+
+.hero_10 {
+  left: 3800px;
+  bottom: 0;
+  z-index: 3; }
+
+.share {
+  height: 100vh;
+  width: 400px;
+  background: black;
+  position: absolute;
+  left: 4800px;
+  z-index: 4; }
+
+.anecdotes-background {
+  width: 100%; }
+
+.content-background {
+  position: absolute;
+  width: 100%;
+  height: 40vh;
+  top: 40%;
+  z-index: 4; }
+
+.subtitle_anecdotes {
+  margin-left: 210px; }
+
+.black-block {
+  width: 100%;
+  height: 502px;
+  background: black;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.main-anecdotes {
+  width: 90%;
+  height: 600px;
+  margin: 0 auto; }
+  .main-anecdotes .first-img {
+    margin-top: 50px;
+    margin-left: 100px;
+    display: inline-block; }
+  .main-anecdotes .title-anecdotes {
+    font-size: 46px;
+    font-family: Trade, Arial;
+    display: inline-block;
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 60px; }
+  .main-anecdotes .text-anecdotes {
+    font-family: Gotham_Book, Arial;
+    font-size: 16px;
+    color: #797979;
+    width: 400px;
+    display: inline-block;
+    margin-left: 60px;
+    padding-top: 140px;
+    line-height: 1.5; }
 
 @font-face {
   font-family: Gotham_Bold;

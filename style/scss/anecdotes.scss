@@ -1,0 +1,65 @@
+.anecdotes-background
+{
+    width: 100%;
+}
+
+.content-background
+{
+    position: absolute;
+    width: 100%;
+    height: 40vh;
+    top: 40%;
+    z-index: 4;
+}
+
+.subtitle_anecdotes
+{
+    margin-left: 210px;
+}
+
+.black-block
+{
+    width: 100%;
+    height: 502px;
+    background: black;
+    opacity: 0.4;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+.main-anecdotes
+{
+    width: 90%;
+    height: 600px;
+    margin: 0 auto;
+
+    .first-img
+    {
+        margin-top: 50px;
+        margin-left: 100px;
+        display: inline-block;
+    }
+
+    .title-anecdotes
+    {
+        font-size: 46px;
+        font-family: Trade, Arial;
+        display: inline-block;
+        position: absolute;
+        margin-top: 70px;
+        margin-left: 60px;
+    }
+
+    .text-anecdotes
+    {
+        font-family: Gotham_Book, Arial;
+        font-size: 16px;
+        color: $grey;
+        width: 400px;
+        display: inline-block;
+        margin-left: 60px;
+        padding-top: 140px;
+        line-height: 1.5;
+    }
+}
