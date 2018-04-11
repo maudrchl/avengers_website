@@ -1,48 +1,15 @@
 <?php
-$id_list = [
-    array(
-        'hero' => 346,
-        'actor' => 3223,
-    ),
-    array(
-        'hero' => 346,
-        'actor' => 3223,
-    ),
-    array(
-        'hero' => 346,
-        'actor' => 3223,
-    ),
-    array(
-        'hero' => 346,
-        'actor' => 3223,
-    ),
-    array(
-        'hero' => 346,
-        'actor' => 3223,
-    ),
-    array(
-        'hero' => 346,
-        'actor' => 3223,
-    ),
-    array(
-        'hero' => 346,
-        'actor' => 3223,
-    ),
-    array(
-        'hero' => 346,
-        'actor' => 3223,
-    ),
-    array(
-        'hero' => 346,
-        'actor' => 3223,
-    ),
-    array(
-        'hero' => 346,
-        'actor' => 3223,
-    ),
-];
+//ASK DATABASE
+$query = $pdo->query('SELECT * FROM characters');
+$query = $query->fetchAll();
 
-//API's call functions
+$id_list = [];
+
+foreach($query as $character){
+    array_push($id_list, $character);
+}
+
+//ASK APIs
 function getActorInfos($actor_id)
 {
     $actor_infos = '';
@@ -89,7 +56,7 @@ function getActorInfos($actor_id)
     return $result;
 }
 
-function getHeroInfos($hero_id)
+function getHeroInfos($hero_id, $marvel_id)
 {
     $hero_infos = '';
     while($hero_infos == '')
@@ -108,10 +75,34 @@ function getHeroInfos($hero_id)
     }
     $hero_infos = json_decode($hero_infos);
 
+    $hero_bio = '';
+    while($hero_bio == '')
+    {
+        $ts = time();
+        $hero_bio_key = md5($ts.MARVEL_PRIVATE.MARVEL_PUBLIC);
+        $hero_bio_url = 'http://gateway.marvel.com/v1/public/characters/'.$marvel_id.'?ts='.$ts.'&apikey='.MARVEL_PUBLIC.'&hash='.$hero_bio_key;
+        $path = './cache/'.md5($hero_bio_url);
+        if(file_exists($path) && time() - filemtime($path) < 3600) // check cache
+        {
+            $hero_bio = file_get_contents($path);
+        } else
+        {
+            $hero_bio = file_get_contents($hero_bio_url);
+            file_put_contents($path, $hero_bio); // create cache
+        }
+    }
+    $hero_bio = json_decode($hero_bio);
+/*
+    echo '<pre>';
+    print_r($hero_bio);
+    echo '</pre>';
+    die('ok');
+*/
     $result = (object) array(
         'id' => $hero_infos->id,
         'name' => $hero_infos->name,
         'full_name' => $hero_infos->{'full-name'},
+        'bio' => $hero_bio->data->results[0]->description,
         'birth' => $hero_infos->{'place-of-birth'},
         'origin' => $hero_infos->{'first-appearance'},
     ); // selected data

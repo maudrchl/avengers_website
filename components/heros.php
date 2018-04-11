@@ -5,8 +5,10 @@
 
     $id = $_GET['id'];
 
-    $hero_infos = getHeroInfos($id_list[$id]['hero']);
-    $actor_infos = getActorInfos($id_list[$id]['actor']);
+
+    $hero_infos = getHeroInfos($id_list[$id]->id_superhero, $id_list[$id]->id_marvel);
+    $actor_infos = getActorInfos($id_list[$id]->id_actor);
+    $anecdote = $id_list[$id]->anecdote;
 
     $doc_title = $hero_infos->name;
 ?>
@@ -28,7 +30,7 @@
     </nav>
     <ul class="hero-nav">
         <?php for($hero_id = 0; $hero_id<count($id_list); $hero_id++){ 
-            $hero_name = getHeroInfos($id_list[$hero_id]['hero'])->name?>
+            $hero_name = getHeroInfos($id_list[$hero_id]->id_superhero, $id_list[$hero_id]->id_marvel)->name?>
             <li <?= $hero_id != $id ? '' : 'class=active' ?>>
                 <a href="./heros.php?id=<?= $hero_id?>"></a>
                 <span><?= $hero_name ?></span>
@@ -46,7 +48,7 @@
             <h1><?= $hero_infos->name?></h1>
         </div>
         <h3>Played by <?= $actor_infos->name?></h3>
-        <p class="main-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ducimus incidunt dignissimos animi esse amet autem, quasi omnis placeat impedit voluptate possimus eum earum aliquam repellat illum, pariatur commodi dolorum!</p>
+        <p class="main-text"><?= $hero_infos->bio?></p>
         <p>PLACE OF BIRTH : <?= $hero_infos->birth?></p>
         <p>FIRST APPEARANCE : <?= $hero_infos->origin?></p>
     </div>
@@ -63,7 +65,7 @@
         <h3>Playing as <?= $hero_infos->name?></h3>
         <p class="main-text"><?= $actor_infos->bio?></p>
         <p>OTHER MOVIES : <?= $actor_infos->cast?></p>
-        <p>ANECDOTE : At 16, Robert Downey Jr once pulled the comic out of the hands of one of his comrades, calling him a geek by the way, which earned him a suspension from his high school. The comics this student read was "The Invincible Iron Man". The irony of life...</p>
+        <p>ANECDOTE : <?= $anecdote?></p>
     </div>
 
     <div class="bottom-gradient"></div>
