@@ -6,6 +6,6 @@ if(typeof HeroSwitch == "function"){
     const heroSwitch = new HeroSwitch()
 }
 
-if(CursorParallax){
+if(typeof CursorParallax == "function"){
     const cursorParallax = new CursorParallax()
 }
