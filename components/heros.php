@@ -10,6 +10,8 @@
     $actor_infos = getActorInfos($id_list[$id]->id_actor);
     $anecdote = $id_list[$id]->anecdote;
 
+    
+
     $doc_title = $hero_infos->name;
 ?>
 

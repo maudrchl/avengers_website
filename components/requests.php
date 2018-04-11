@@ -81,7 +81,7 @@ function getHeroInfos($hero_id, $marvel_id)
         $ts = time();
         $hero_bio_key = md5($ts.MARVEL_PRIVATE.MARVEL_PUBLIC);
         $hero_bio_url = 'http://gateway.marvel.com/v1/public/characters/'.$marvel_id.'?ts='.$ts.'&apikey='.MARVEL_PUBLIC.'&hash='.$hero_bio_key;
-        $path = './cache/'.md5($hero_bio_url);
+        $path = './cache/'.md5($marvel_id);
         if(file_exists($path) && time() - filemtime($path) < 3600) // check cache
         {
             $hero_bio = file_get_contents($path);
