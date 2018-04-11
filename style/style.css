@@ -105,7 +105,8 @@ nav {
   height: 20px;
   cursor: pointer;
   transition: transform 0.5s ease-in-out;
-  z-index: 300; }
+  z-index: 300;
+  mix-blend-mode: exclusion; }
 
 .bar1 {
   width: 50px;
@@ -148,11 +149,11 @@ nav:hover .bar2 {
   transform: translateX(-3000px); }
 
 .item1 {
-  padding-top: 5%; }
+  padding-top: 30px; }
 
 .nav-item {
   margin-left: 300px;
-  margin-top: 70px; }
+  margin-top: 50px; }
 
 .line {
   margin-top: 20px;
@@ -391,69 +392,103 @@ body.hero-page {
 
 .test {
   margin: 0;
-  width: 5500px;
-  overflow: scroll;
-  height: 100vh;
-  background-image: url("../images/land.png");
-  position: absolute; }
+  width: 5200px;
+  overflow: hidden;
+  height: 100%;
+  position: absolute;
+  z-index: 2; }
+
+.bck-img {
+  z-index: 3;
+  width: 5200px;
+  position: absolute;
+  top: -10px;
+  left: -10px; }
 
 .gallery {
   position: absolute;
   margin: 0;
-  width: 5500px;
+  top: 0;
+  width: 5200px;
   overflow: scroll;
-  height: 800px; }
+  height: 100%; }
 
 .gallery_hero {
   width: 480px;
+  position: absolute;
+  will-change: all;
   filter: grayscale(100%); }
 
 .hero_0 {
   z-index: 10;
-  filter: none; }
+  position: absolute;
+  left: 0;
+  bottom: 0; }
 
 .hero_1 {
-  margin-bottom: 400px;
-  margin-left: -260px;
-  margin-right: -200px;
-  z-index: 1; }
+  left: 300px;
+  top: -50px;
+  z-index: 4; }
 
 .hero_2 {
-  margin-bottom: 0px;
-  margin-left: -100px;
-  margin-right: 100px;
-  z-index: 1; }
+  left: 700px;
+  bottom: 0;
+  z-index: 20; }
 
 .hero_3 {
-  margin-bottom: 0px;
-  margin-left: 160px;
-  z-index: 1; }
+  left: 4200px;
+  bottom: 0;
+  width: 400px;
+  z-index: 4; }
 
 .hero_4 {
-  margin-bottom: 0px;
-  margin-left: -360px;
-  z-index: 1;
-  width: 800px; }
+  left: 900px;
+  bottom: 0;
+  width: 800px;
+  z-index: 5; }
 
 .hero_5 {
-  margin-bottom: 0px;
-  margin-left: -260px;
-  margin-right: -100px;
-  z-index: 1;
-  width: 600px; }
+  left: 1400px;
+  bottom: -200px;
+  width: 600px;
+  z-index: 4; }
 
 .hero_6 {
-  width: 700px; }
+  left: 1700px;
+  bottom: 0;
+  width: 600px;
+  z-index: 3; }
+
+.hero_7 {
+  left: 2300px;
+  bottom: 0;
+  width: 500px;
+  z-index: 3; }
 
 .hero_8 {
-  width: 650px; }
+  left: 2500px;
+  bottom: 0;
+  width: 600px;
+  z-index: 3; }
 
 .hero_9 {
-  margin-bottom: 0px;
-  margin-left: -260px;
-  margin-right: -100px;
-  z-index: 1;
-  width: 900px; }
+  left: 3000px;
+  bottom: 0;
+  width: 900px;
+  z-index: 3; }
+
+.hero_10 {
+  left: 3800px;
+  bottom: 0;
+  z-index: 3; }
+
+.share {
+  height: 100vh;
+  width: 400px;
+  background: black;
+  position: absolute;
+  left: 4800px;
+  z-index: 4; }
 
 .anecdotes-background {
   width: 100%; }

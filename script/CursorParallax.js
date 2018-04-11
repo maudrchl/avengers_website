@@ -51,6 +51,12 @@ class CursorParallax
             this.mouse.x = event.clientX / windowWidth - 0.5
             this.mouse.y = event.clientY / windowHeight - 0.5
         })
+
+        window.addEventListener('mousewheel', (event) =>
+        {
+            this.mouse.x = event.deltaX / windowWidth - 0.5
+            this.mouse.y = event.deltaY / windowHeight - 0.5
+        })
     }
 
     // RequestAnimationFrame

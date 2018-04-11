@@ -1,6 +1,6 @@
 <?php 
     include "components/config.php";
-    include "components/nav.php";
+    include "components/nav_index.php";
 ?>
 
 <!DOCTYPE html>
