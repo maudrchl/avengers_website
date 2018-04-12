@@ -22,7 +22,7 @@
         <div id="loader"></div>
     </div>
     <script src="../script/lottie.js"></script>
-    <script src="../script/loader2.js"></script>
+    <script src="../script/loader.js"></script>
     <div class="navigation"></div>
     <nav class="bars">
         <div class="bar1"></div>
