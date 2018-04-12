@@ -23,6 +23,7 @@ catch(PDOException $e){
 }
 /*
 $toto = [
+    [226, 1009282, 71580],
     [620, 1009610, 1136406],
     [346, 1009368, 3223],
     [659, 1009664, 16828],
@@ -35,7 +36,7 @@ $toto = [
     [107, 1009189, 1245],
 ];
 
-for($i=1; $i<10; $i++){
+for($i=0; $i<11; $i++){
     $exec = $pdo->exec('INSERT INTO characters (id_website, id_marvel, id_superhero, id_actor) VALUES ('.$i.', '.$toto[$i][1].', '.$toto[$i][0].', '.$toto[$i][2].')');
 }
 */

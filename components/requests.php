@@ -92,12 +92,7 @@ function getHeroInfos($hero_id, $marvel_id)
         }
     }
     $hero_bio = json_decode($hero_bio);
-/*
-    echo '<pre>';
-    print_r($hero_bio);
-    echo '</pre>';
-    die('ok');
-*/
+    
     $result = (object) array(
         'id' => $hero_infos->id,
         'name' => $hero_infos->name,

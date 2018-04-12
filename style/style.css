@@ -648,6 +648,78 @@ div.content {
     padding-top: 140px;
     line-height: 1.5; }
 
+header {
+  background: url("../images/cinema.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  header h1 {
+    font-family: Trade, Arial;
+    font-size: 100px;
+    color: #ffffff; }
+
+main {
+  display: flex;
+  padding: 50px; }
+  main .map {
+    width: calc(40vw - 50px);
+    height: calc(40vw - 50px);
+    background: #EE0000; }
+  main .cinema {
+    margin-left: 50px;
+    margin-bottom: 20px;
+    width: calc(60vw - 100px);
+    padding: 10px;
+    border-bottom: solid #0F0F0F 1px; }
+    main .cinema .name {
+      color: #0F0F0F;
+      text-align: left;
+      font-size: 28px;
+      margin-top: 0; }
+    main .cinema .address {
+      color: #EE0000;
+      font-family: Gotham_Book, Arial;
+      font-size: 14px; }
+  main .showtimes {
+    overflow-x: scroll;
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: left; }
+    main .showtimes .showtime {
+      min-width: 100px;
+      min-height: 100px;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: solid #0F0F0F 1px;
+      margin-right: 5px; }
+      main .showtimes .showtime .day {
+        color: #EE0000;
+        font-family: Trade, Arial;
+        font-size: 24px; }
+      main .showtimes .showtime .hour {
+        display: inline-block;
+        margin: 5px 0;
+        color: #404040;
+        font-family: Gotham_Book, Arial;
+        font-size: 14px; }
+      main .showtimes .showtime .ticket {
+        padding: 5px;
+        height: 26px;
+        background: #EE0000;
+        color: #ffffff;
+        font-family: Gotham_Bold, Arial;
+        font-size: 14px;
+        cursor: pointer; }
+
 @font-face {
   font-family: Gotham_Bold;
   src: url(../fonts/Gotham-Bold.otf); }
