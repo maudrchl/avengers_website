@@ -843,3 +843,25 @@ main {
 @font-face {
   font-family: Trade;
   src: url(../fonts/Trade.otf); }
+.loader-container {
+  background-color: #0F0F0F;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: opacity;
+  transition: opacity 0.8s ease;
+  pointer-events: none;
+  user-select: none; }
+  .loader-container #loader {
+    width: 220px;
+    height: 220px;
+    display: block;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    text-align: center; }

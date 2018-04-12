@@ -47,7 +47,7 @@
     </div>
     <ul class="hero-nav">
         <?php for($hero_id = 0; $hero_id<count($id_list); $hero_id++){ 
-            $hero_name = getHeroInfos($id_list[$hero_id]->id_superhero, $id_list[$hero_id]->id_marvel)->name?>
+            $hero_name = $id_list[$hero_id]->name ?>
             <li <?= $hero_id != $id ? '' : 'class=active' ?>>
                 <a href="./heros.php?id=<?= $hero_id?>"></a>
                 <span><?= $hero_name ?></span>
