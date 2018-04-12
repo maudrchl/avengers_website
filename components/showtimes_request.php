@@ -1,4 +1,14 @@
 <?php
+function getZipcode()
+{
+    if(!empty($_POST))
+        {
+            if(isset($_POST['sumbit'])){
+                $zip = $_POST['zip'];
+        }
+    }
+}
+
 function parseTime($time)
 {
     $time = str_split($time);
@@ -28,7 +38,7 @@ function getShowtimes($day, $zip_code)
     while($showtimes_results == '')
     {
         //find showtimes
-        $place_id = getPlaceId($zip_code);
+        $place_id = getPlaceId($zip_code) ;
         $showtimes_request_url = 'http://www.allocine.fr/_/showtimes/movie-218265/near-'.$place_id.'/?date='.$day.'&v=v1.2.5.42';
         $path = './cache/'.md5($showtimes_request_url);
         if(file_exists($path) && time() - filemtime($path) < 3600) // check cache
@@ -75,8 +85,9 @@ function getShowtimes($day, $zip_code)
                 'city' => $theatres_result[$id]->address->city,
                 'showtimes' => $showtimes,
             ];
+            
             array_push($result, $theatre_datas);
-        }
+        }   
     }
     
     return $result;

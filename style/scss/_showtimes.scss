@@ -21,15 +21,18 @@ main{
 
     .map{
         width: calc(40vw - 50px);
-        height: calc(40vw - 50px);
+        height: calc(60vw - 50px);
         background: $red;
     }
 
     .zipcode
     {
-        border: 1px solid black;
+        border-bottom: 1px solid #6E6E6E;
         margin-left: 60px;
         margin-bottom: 30px;
+        margin-right: 20px;
+        font-family: Gotham_Book, Arial;
+        color: black;
     }
 
     .submit
@@ -44,9 +47,9 @@ main{
     .zipcode::placeholder
     {
         font-family: Gotham_Book, Arial;
-    }
-    
-    .error{
+        color: #A7A7A7;
+    } 
+        .error{
         margin-left: 50px;
         margin-bottom: 20px;
         width: calc(60vw - 100px);
@@ -60,7 +63,6 @@ main{
         margin-bottom: 20px;
         width: calc(60vw - 100px);
         padding: 10px;
-        border-bottom: solid $black 1px;
 
         .name{
             color: $black;
@@ -87,12 +89,11 @@ main{
         .showtime{
             min-width: 100px;
             min-height: 100px;
-            background: #ffffff;
+            background: #EBEBEB;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            border: solid $black 1px;
             margin-right: 5px;
             
 
@@ -121,6 +122,4 @@ main{
             }
         }
     }
-
-
 }
