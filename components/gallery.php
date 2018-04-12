@@ -37,7 +37,8 @@
         <p class="txt-gallery">Fear is not a choice.</p>
         <p class="txt-gallery2">Hulk...smash!</p>
         <img src='../images/explosion.png' class="gallery_hero explosion js-parallax" data-amplitude="0.5">
-        <img src='../images/fog.png' class="gallery_hero fog js-parallax" data-amplitude="0.5">
+        <img src="../images/clouds.png" class="clouds js-parallax js-lazy-load" data-amplitude="1">
+        <img src="../images/gallery/rock.png" class="rock js-parallax js-lazy-load" data-amplitude="3">
         <a href="heros.php?id=0"><img src="../images/gallery/hero_0.png" class="gallery_hero hero_0 js-parallax js-lazy-load" data-amplitude="2"></a>
         <a href="heros.php?id=1"><img src="../images/gallery/hero_1.png" class="gallery_hero hero_1 js-parallax js-lazy-load" data-amplitude="1"></a>
         <a href="heros.php?id=2"><img src="../images/gallery/hero_2.png" class="gallery_hero hero_2 js-parallax js-lazy-load" data-amplitude="2"></a> 

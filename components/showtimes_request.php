@@ -92,12 +92,4 @@ function getShowtimes($day, $zip_code)
     
     return $result;
 }
-/*
-$day = '2018-04-10';
-$zip_code = 93100;
-
-echo '<pre>';
-print_r(getShowtimes($day, $zip_code));
-echo '</pre>';
-*/
 ?>
