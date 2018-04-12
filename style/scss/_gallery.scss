@@ -1,21 +1,33 @@
-.test
+.gallery-test
 {
-    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+    background: black;
+}
+
+div.background {
+    background: url('../images/land.jpg') center 0 no-repeat fixed;
+    height: 100vh;
     width: 5200px;
-    overflow: hidden;
-    height: 100%;
+}    
+
+div.content {
     position: absolute;
-    z-index: 2;
-    // background: black;
+    height: 100%;
+    width: 5200px;
+    top: 0;
+    overflow: hidden;
 }
 
 .bck-img
 {
     z-index: 3;
     width: 5200px;
-    position: absolute;
+    height: 100%;
     top: -10px;
     left: -10px;
+    overflow: scroll;
 }
 
 .gallery
@@ -24,7 +36,7 @@
     margin: 0;
     top:0;
     width: 5200px;
-    overflow: scroll;
+    overflow: hidden;
     height: 100%;
 }
 
@@ -42,13 +54,15 @@
     position: absolute;
     left:0;
     bottom: 0;
+    filter: none;
 }
 
 .hero_1
 {
-    left:300px;
+    left:200px;
     top: -50px;
     z-index: 4;
+    transform: scale(2, 3);
 }
 
 .hero_2
@@ -61,10 +75,12 @@
 .hero_3
 {
     left:4200px;
-    bottom: 0;
+    bottom: -200px;
     width: 400px;
     z-index: 4;
 }
+
+
 
 .hero_4
 {
@@ -81,6 +97,15 @@
     bottom: -200px;
     width: 600px;
     z-index: 4;
+}
+
+.shield
+{
+    position: absolute;
+    left:1805px;
+    bottom: 50px;
+    width: 500px;
+    z-index: 3;
 }
 
 .hero_6
@@ -104,15 +129,15 @@
     left:2500px;
     bottom: 0;
     width: 600px;
-    z-index: 3;
+    z-index: 4;
 }
 
 .hero_9
 {
     left:3000px;
-    bottom: 0;
+    bottom: -100px;
     width: 900px;
-    z-index: 3;
+    z-index: 2;
 }
 
 .hero_10
@@ -130,4 +155,51 @@
     position: absolute;
     left: 4800px;
     z-index: 4;
+}
+
+.txt-gallery
+{
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    font-family: Gotham_Bold, Arial;
+    top: 150px;
+    left: 2000px;
+}
+
+.txt-gallery2
+{
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    font-family: Gotham_Bold, Arial;
+    top: 200px;
+    left: 3400px;
+}
+
+// canvas
+// {
+//     width: 1000px;
+//     height: 1000px;
+//     position: absolute;
+// }
+
+.canvas
+{
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    top: -300px;
+    left: 30px;
+}
+
+.canvas2
+{
+    position: absolute;
+    width: 2000px;
+    height: 2000px;
+    position: absolute;
+    top: 500px;
+    left: 2800px;
 }

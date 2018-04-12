@@ -9,3 +9,11 @@ if(typeof HeroSwitch == "function"){
 if(typeof CursorParallax == "function"){
     const cursorParallax = new CursorParallax()
 }
+
+if(typeof GalleryFilter == "function"){
+    const galleryFilter = new GalleryFilter()
+}
+
+if(typeof Audio == "function"){
+    const audio = new Audio()
+}

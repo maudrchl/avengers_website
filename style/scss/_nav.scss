@@ -16,7 +16,7 @@ nav
 {
     width: 50px;
     height: 2px;
-    background: white;
+    background: #ECECEC;
     transform-origin: right;
     transition: transform 0.5s ease-in-out;
     z-index: 10;
@@ -26,7 +26,7 @@ nav
 {
     width: 30px;
     height: 2px;
-    background: white;
+    background: #ECECEC;
     margin-top: 5px;
     transition: transform 0.5s ease-in-out;
 }
@@ -123,4 +123,82 @@ nav:hover .bar2
     right: 240px;
     font-family: Trade, Arial;
     padding-top: 10px;
+}
+
+.equalizer {
+    margin: 0 auto;
+    position: fixed;
+    right: 50px;
+    top: 60px;
+    width: 50px;
+    height: 30px;
+    font-size: 0;
+    z-index: 100;
+}
+
+.equalizer .bar {
+    width: 10%;
+    height: 100%;
+    margin: 0 1%;
+    background: #ECECEC;
+    display: inline-block;
+    will-change: transform;
+}
+
+.equalizer .bar {
+    animation: equalizer-bar-boom 1.8s infinite backwards;
+}
+
+.equalizer.stop .bar {
+    animation: equalizer-bar-bomm paused;
+    height: 10%;
+    transform: translateY(14px)
+}
+
+.equalizer .bar-1 {
+    animation-delay: 0.2s;
+}
+
+.equalizer .bar-2 {
+    animation-delay: 0.7s;
+}
+
+.equalizer .bar-3 {
+    animation-delay: 0.4s;
+}
+
+.equalizer .bar-4 {
+    animation-delay: 0.5s;
+}
+
+.equalizer .bar-4 {
+    animation-delay: 0.9s;
+}
+
+@keyframes equalizer-bar-boom {
+    0% {
+        transform: scaleY(0.1)
+    }
+    10% {
+        transform: scaleY(1)
+    }
+    100% {
+        transform: scaleY(0)
+    }
+}
+
+@keyframes equalizer-bar-stop {
+    0% {
+        transform: scaleY(1)
+    }
+    10% {
+        transform: scaleY(0.5)
+    }
+    100% {
+        transform: scaleY(0)
+    }
+}
+
+.equalizer:hover {
+    cursor: pointer;
 }

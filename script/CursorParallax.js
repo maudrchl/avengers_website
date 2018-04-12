@@ -13,8 +13,6 @@ class CursorParallax
     setItems()
     {
         const $elements = document.querySelectorAll('.js-cursor-parallax')
-        console.log($elements)
-
         this.items = []
         
         for(const $element of $elements)
@@ -54,8 +52,8 @@ class CursorParallax
 
         window.addEventListener('mousewheel', (event) =>
         {
-            this.mouse.x = event.deltaX / windowWidth - 0.5
-            this.mouse.y = event.deltaY / windowHeight - 0.5
+            this.mouse.x = scrollX / windowWidth  - 2
+            this.mouse.y = scrollY / windowWidth + 0.5
         })
     }
 

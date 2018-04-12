@@ -20,3 +20,11 @@
         <div class="bar1"></div>
         <div class="bar2"></div>
     </nav>
+    <audio src="../audio/song.mp3" autoplay loop></audio>
+    <div class="equalizer">
+        <div class="bar bar-1"></div>
+        <div class="bar bar-2"></div>
+        <div class="bar bar-3"></div>
+        <div class="bar bar-4"></div>
+        <div class="bar bar-5"></div>
+    </div>

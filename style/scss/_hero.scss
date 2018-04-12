@@ -17,6 +17,7 @@ body.hero-page{
         width: 40vw;
         background: $red;
         transform: skewX(4deg) translateX(60px);
+        transition: transform 0.6s cubic-bezier(0.7, 0.09, 0.26, 0.94);
     }
 
     .hero-nav{

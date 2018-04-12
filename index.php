@@ -26,6 +26,14 @@
         <div class="bar1"></div>
         <div class="bar2"></div>
     </nav>
+    <audio src="audio/song.mp3" autoplay loop></audio>
+    <div class="equalizer">
+        <div class="bar bar-1"></div>
+        <div class="bar bar-2"></div>
+        <div class="bar bar-3"></div>
+        <div class="bar bar-4"></div>
+        <div class="bar bar-5"></div>
+    </div>
     <div class="background_video">
         <video loop muted autoplay class="fullscreen-bg__video">
             <source src="images/avengers.mp4" type="video/mp4">
@@ -46,5 +54,6 @@
     </body>
 
     <script src="script/Nav.js"></script>
+    <script src="script/Audio.js"></script>
     <script src="script/main.js"></script>
 </html>

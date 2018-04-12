@@ -19,9 +19,11 @@ class HeroSwitch{
     event(){
         this.actorButton.addEventListener( 'click', ()=>{
             this.switchToActor()
+            this.changeBackgroundActor()
         })
         this.characterButton.addEventListener( 'click', ()=>{
             this.switchToCharacter()
+            this.changeBackgroundCharacter()
         })
     }
 
@@ -47,9 +49,12 @@ class HeroSwitch{
         this.actorButton.classList.remove('active')
     }
 
-    changeBackground(){
-        
-        this.background.style.transform = skew("-10deg")
-
+    changeBackgroundActor(){
+        this.background.style.transform = "skewX(-4deg)"
     }
+
+    changeBackgroundCharacter(){
+        this.background.style.transform = "skewX(4deg)"
+    }
+
 }

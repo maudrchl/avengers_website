@@ -111,7 +111,7 @@ nav {
 .bar1 {
   width: 50px;
   height: 2px;
-  background: white;
+  background: #ECECEC;
   transform-origin: right;
   transition: transform 0.5s ease-in-out;
   z-index: 10; }
@@ -119,7 +119,7 @@ nav {
 .bar2 {
   width: 30px;
   height: 2px;
-  background: white;
+  background: #ECECEC;
   margin-top: 5px;
   transition: transform 0.5s ease-in-out; }
 
@@ -193,6 +193,64 @@ nav:hover .bar2 {
   font-family: Trade, Arial;
   padding-top: 10px; }
 
+.equalizer {
+  margin: 0 auto;
+  position: fixed;
+  right: 50px;
+  top: 60px;
+  width: 50px;
+  height: 30px;
+  font-size: 0;
+  z-index: 100; }
+
+.equalizer .bar {
+  width: 10%;
+  height: 100%;
+  margin: 0 1%;
+  background: #ECECEC;
+  display: inline-block;
+  will-change: transform; }
+
+.equalizer .bar {
+  animation: equalizer-bar-boom 1.8s infinite backwards; }
+
+.equalizer.stop .bar {
+  animation: equalizer-bar-bomm paused;
+  height: 10%;
+  transform: translateY(14px); }
+
+.equalizer .bar-1 {
+  animation-delay: 0.2s; }
+
+.equalizer .bar-2 {
+  animation-delay: 0.7s; }
+
+.equalizer .bar-3 {
+  animation-delay: 0.4s; }
+
+.equalizer .bar-4 {
+  animation-delay: 0.5s; }
+
+.equalizer .bar-4 {
+  animation-delay: 0.9s; }
+
+@keyframes equalizer-bar-boom {
+  0% {
+    transform: scaleY(0.1); }
+  10% {
+    transform: scaleY(1); }
+  100% {
+    transform: scaleY(0); } }
+@keyframes equalizer-bar-stop {
+  0% {
+    transform: scaleY(1); }
+  10% {
+    transform: scaleY(0.5); }
+  100% {
+    transform: scaleY(0); } }
+.equalizer:hover {
+  cursor: pointer; }
+
 body.hero-page {
   height: 100vh;
   overflow: hidden; }
@@ -206,7 +264,8 @@ body.hero-page {
     height: 100%;
     width: 40vw;
     background: #EE0000;
-    transform: skewX(4deg) translateX(60px); }
+    transform: skewX(4deg) translateX(60px);
+    transition: transform 0.6s cubic-bezier(0.7, 0.09, 0.26, 0.94); }
   body.hero-page .hero-nav {
     position: absolute;
     top: 50%;
@@ -390,27 +449,38 @@ body.hero-page {
       body.hero-page .buttons-container .switch-hero:hover .switch-link {
         color: #EE0000; }
 
-.test {
-  margin: 0;
-  width: 5200px;
-  overflow: hidden;
-  height: 100%;
+.gallery-test {
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+  background: black; }
+
+div.background {
+  background: url("../images/land.jpg") center 0 no-repeat fixed;
+  height: 100vh;
+  width: 5200px; }
+
+div.content {
   position: absolute;
-  z-index: 2; }
+  height: 100%;
+  width: 5200px;
+  top: 0;
+  overflow: hidden; }
 
 .bck-img {
   z-index: 3;
   width: 5200px;
-  position: absolute;
+  height: 100%;
   top: -10px;
-  left: -10px; }
+  left: -10px;
+  overflow: scroll; }
 
 .gallery {
   position: absolute;
   margin: 0;
   top: 0;
   width: 5200px;
-  overflow: scroll;
+  overflow: hidden;
   height: 100%; }
 
 .gallery_hero {
@@ -423,12 +493,14 @@ body.hero-page {
   z-index: 10;
   position: absolute;
   left: 0;
-  bottom: 0; }
+  bottom: 0;
+  filter: none; }
 
 .hero_1 {
-  left: 300px;
+  left: 200px;
   top: -50px;
-  z-index: 4; }
+  z-index: 4;
+  transform: scale(2, 3); }
 
 .hero_2 {
   left: 700px;
@@ -437,7 +509,7 @@ body.hero-page {
 
 .hero_3 {
   left: 4200px;
-  bottom: 0;
+  bottom: -200px;
   width: 400px;
   z-index: 4; }
 
@@ -452,6 +524,13 @@ body.hero-page {
   bottom: -200px;
   width: 600px;
   z-index: 4; }
+
+.shield {
+  position: absolute;
+  left: 1805px;
+  bottom: 50px;
+  width: 500px;
+  z-index: 3; }
 
 .hero_6 {
   left: 1700px;
@@ -469,13 +548,13 @@ body.hero-page {
   left: 2500px;
   bottom: 0;
   width: 600px;
-  z-index: 3; }
+  z-index: 4; }
 
 .hero_9 {
   left: 3000px;
-  bottom: 0;
+  bottom: -100px;
   width: 900px;
-  z-index: 3; }
+  z-index: 2; }
 
 .hero_10 {
   left: 3800px;
@@ -489,6 +568,38 @@ body.hero-page {
   position: absolute;
   left: 4800px;
   z-index: 4; }
+
+.txt-gallery {
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  font-family: Gotham_Bold, Arial;
+  top: 150px;
+  left: 2000px; }
+
+.txt-gallery2 {
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  font-family: Gotham_Bold, Arial;
+  top: 200px;
+  left: 3400px; }
+
+.canvas {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  position: absolute;
+  top: -300px;
+  left: 30px; }
+
+.canvas2 {
+  position: absolute;
+  width: 2000px;
+  height: 2000px;
+  position: absolute;
+  top: 500px;
+  left: 2800px; }
 
 .anecdotes-background {
   width: 100%; }
