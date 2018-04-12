@@ -56,9 +56,9 @@
     </ul>
     <!-- hero content -->
     <div class="hero-image js-character">
-        <img class="normal-image" src="../images/hero_actor/hero_<?= $id?>.png" alt="<?= $hero_infos->name?>">
-        <img class="color-image-1" src="../images/hero_actor/hero_<?= $id?>.png" alt="<?= $hero_infos->name?>">
-        <img class="color-image-2" src="../images/hero_actor/hero_<?= $id?>.png" alt="<?= $hero_infos->name?>">
+        <img class="normal-image js-lazy-load" src="../images/hero_actor/hero_<?= $id?>.png" alt="<?= $hero_infos->name?>">
+        <img class="color-image-1 js-lazy-load" src="../images/hero_actor/hero_<?= $id?>.png" alt="<?= $hero_infos->name?>">
+        <img class="color-image-2 js-lazy-load" src="../images/hero_actor/hero_<?= $id?>.png" alt="<?= $hero_infos->name?>">
     </div>
     <div class="content js-character">
         <div class="name-container">
@@ -66,14 +66,14 @@
         </div>
         <h3>Played by <?= $actor_infos->name?></h3>
         <p class="main-text"><?= $hero_infos->bio?></p>
-        <p>PLACE OF BIRTH : <?= $hero_infos->birth?></p>
-        <p>FIRST APPEARANCE : <?= $hero_infos->origin?></p>
+        <p><span class="bold">PLACE OF BIRTH</span> : <?= $hero_infos->birth?></p>
+        <p><span class="bold">FIRST APPEARANCE</span> : <?= $hero_infos->origin?></p>
     </div>
     <!-- actor content -->
     <div class="hero-image js-actor hidden">
-        <img class="normal-image" src="../images/hero_actor/actor_<?= $id?>.png" alt="<?= $hero_infos->name?>">
-        <img class="color-image-1" src="../images/hero_actor/actor_<?= $id?>.png" alt="<?= $hero_infos->name?>">
-        <img class="color-image-2" src="../images/hero_actor/actor_<?= $id?>.png" alt="<?= $hero_infos->name?>">
+        <img class="normal-image js-lazy-load" src="../images/hero_actor/actor_<?= $id?>.png" alt="<?= $hero_infos->name?>">
+        <img class="color-image-1 js-lazy-load" src="../images/hero_actor/actor_<?= $id?>.png" alt="<?= $hero_infos->name?>">
+        <img class="color-image-2 js-lazy-load" src="../images/hero_actor/actor_<?= $id?>.png" alt="<?= $hero_infos->name?>">
     </div>
     <div class="content js-actor hidden">
         <div class="name-container">
@@ -81,8 +81,8 @@
         </div>
         <h3>Playing as <?= $hero_infos->name?></h3>
         <p class="main-text"><?= $actor_infos->bio?></p>
-        <p>OTHER MOVIES : <?= $actor_infos->cast?></p>
-        <p>ANECDOTE : <?= $anecdote?></p>
+        <p><span class="bold">OTHER MOVIES : </span><?= $actor_infos->cast?></p>
+        <p><span class="bold">ANECDOTE : </span><?= $anecdote?></p>
     </div>
 
     <div class="bottom-gradient"></div>
@@ -107,6 +107,7 @@
 
     <script src="../script/Nav.js"></script>
     <script src="../script/Audio.js"></script>
+    <script src="../script/LazyLoading.js"></script>
     <script src="../script/HeroSwitch.js"></script>
     <script src="../script/main.js"></script>
 </body>

@@ -29,3 +29,10 @@ if(typeof ScrollParallax == "function"){
 if(typeof ScrollPop == "function"){
     const scrollPop = new ScrollPop()
 }
+if(typeof Loader == "function"){
+    const loader = new Loader()
+}
+
+if(typeof LazyLoading == "function"){
+    const lazyLoading = new LazyLoading()
+}
