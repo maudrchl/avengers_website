@@ -10,10 +10,18 @@ if(typeof CursorParallax == "function"){
     const cursorParallax = new CursorParallax()
 }
 
+if(typeof Scroller == "function"){
+    const scroller = new Scroller()
+}
+
 if(typeof GalleryFilter == "function"){
     const galleryFilter = new GalleryFilter()
 }
 
 if(typeof Audio == "function"){
     const audio = new Audio()
+}
+
+if(typeof ScrollParallax == "function"){
+    const scrollParallax = new ScrollParallax()
 }
