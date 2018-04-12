@@ -1,0 +1,96 @@
+header{
+    background: url('../images/cinema.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1{
+        font-family: $trade;
+        font-size: $title;
+        color: #ffffff;
+    }
+}
+
+main{
+    display: flex;
+    padding: 50px;
+
+    .map{
+        width: calc(40vw - 50px);
+        height: calc(40vw - 50px);
+        background: $red;
+    }
+    
+    .cinema{
+        margin-left: 50px;
+        margin-bottom: 20px;
+        width: calc(60vw - 100px);
+        padding: 10px;
+        border-bottom: solid $black 1px;
+
+        .name{
+            color: $black;
+            text-align: left;
+            font-size: $big_text;
+            margin-top: 0;
+        }
+
+        .address{
+            color: $red;
+            font-family: Gotham_Book, Arial;
+            font-size: 14px;
+        }
+    }
+
+    .showtimes{
+        overflow-x: scroll;
+        width: 100%;
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+
+        .showtime{
+            min-width: 100px;
+            min-height: 100px;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: solid $black 1px;
+            margin-right: 5px;
+            
+
+            .day{
+                color: $red;
+                font-family: $trade;
+                font-size: 24px;
+            }
+
+            .hour{
+                display: inline-block;
+                margin: 5px 0;
+                color: #404040;
+                font-family: Gotham_Book, Arial;
+                font-size: $text;
+            }
+
+            .ticket{
+                padding: 5px;
+                height: 26px;
+                background: $red;
+                color: #ffffff;
+                font-family: Gotham_Bold, Arial;
+                font-size: $text;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+}
