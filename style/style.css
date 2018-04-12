@@ -669,6 +669,13 @@ main {
     width: calc(40vw - 50px);
     height: calc(40vw - 50px);
     background: #EE0000; }
+  main .error {
+    margin-left: 50px;
+    margin-bottom: 20px;
+    width: calc(60vw - 100px);
+    color: #EE0000;
+    font-family: Gotham_Book, Arial;
+    font-size: 14px; }
   main .cinema {
     margin-left: 50px;
     margin-bottom: 20px;

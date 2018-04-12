@@ -24,6 +24,15 @@ main{
         height: calc(40vw - 50px);
         background: $red;
     }
+
+    .error{
+        margin-left: 50px;
+        margin-bottom: 20px;
+        width: calc(60vw - 100px);
+        color: $red;
+        font-family: Gotham_Book, Arial;
+        font-size: $text;
+    }
     
     .cinema{
         margin-left: 50px;
