@@ -18,6 +18,11 @@
     <meta name="theme-color" content="#ffffff"> 
 </head>
 <body class="gallery-test">
+    <div class="loader-container">
+        <div id="loader"></div>
+    </div>
+    <script src="../script/lottie.js"></script>
+    <script src="../script/loader2.js"></script>
     <div class="navigation"></div>
     <nav class="bars">
         <div class="bar1"></div>
