@@ -25,3 +25,11 @@ if(typeof Audio == "function"){
 if(typeof ScrollParallax == "function"){
     const scrollParallax = new ScrollParallax()
 }
+
+if(typeof Loader == "function"){
+    const loader = new Loader()
+}
+
+if(typeof LazyLoading == "function"){
+    const lazyLoading = new LazyLoading()
+}

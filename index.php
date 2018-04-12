@@ -54,6 +54,7 @@
     </body>
 
     <script src="script/Nav.js"></script>
+    <script src="script/Loader.js"></script>
     <script src="script/Audio.js"></script>
     <script src="script/main.js"></script>
 </html>

@@ -147,7 +147,7 @@ body.hero-page{
         right: 0;
         background: $black;
         color: #ffffff;
-        overflow-x: hidden;
+        overflow-y: scroll;
 
         .name-container{
             overflow-y: hidden;
@@ -163,12 +163,18 @@ body.hero-page{
         }
 
         h3{
-            font-size: 24px;
+            font-size: 28px;
             margin-top: 60px;
             padding-left: 10vw;
-            font-family: Gotham_Book, Arial;
+            font-family: Trade, Arial;
             will-change: transform;
             transition: transform 0.4s cubic-bezier(0.7, 0.09, 0.26, 0.94) 0.2s;
+        }
+
+        .bold
+        {
+            font-family: Gotham_Bold, Arial;
+            color: white;
         }
 
         p{
@@ -179,6 +185,7 @@ body.hero-page{
             font-family: Gotham_Book, Arial;
             will-change: transform;
             transition: transform 0.4s cubic-bezier(0.7, 0.09, 0.26, 0.94) 0.4s;
+            color: #B1B0B0;
         }
 
         p.main-text{

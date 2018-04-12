@@ -22,7 +22,7 @@
     <div class="nav-item">
         <div class="line"></div>
         <span class="number">05</span>
-        <p class="title"><a href="showtimes.php">Showtimes</a></span>
+        <p class="title"><a href="showtimes.php?zip=75011">Showtimes</a></span>
     </div>
     <div class="socials"></div>
     <p class="join">Join us</p>
