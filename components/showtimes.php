@@ -7,23 +7,58 @@
     $zip = $_GET['zip'];
     $date = date('Y-m-d', time());
 
-    $query = file_get_contents('http://maps.googleapis.com/maps/api/geocode/json?address='.$zip.'&region=fr');
+    $query = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?address='.$zip.'&region=fr&key='.GOOGLE_KEY);
     $query = json_decode($query);
+
     $position = '{lat: '.$query->results[0]->geometry->location->lat.', lng: '.$query->results[0]->geometry->location->lng.'}';
 
     $showtimes = getShowtimes($date, $zip);
 
     $array_theatres = array();
     for ($i = 0; $i < sizeof($showtimes); $i++){
-        $adress = $showtimes[$i]['address'];
-        $query2 = file_get_contents('http://maps.googleapis.com/maps/api/geocode/json?address='.$adress.'&region=fr');
+        $adress = urlencode($showtimes[$i]['address']);
+        $query2 = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?address='.$adress.'&region=fr&key='.GOOGLE_KEY);
         $query2 = json_decode($query2);
 
         $position_theatres = '{lat: '.$query2->results[0]->geometry->location->lat.', lng: '.$query2->results[0]->geometry->location->lng.'}';
         array_push($array_theatres, $position_theatres);
     }
-    include('header.php');
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showtimes</title>
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#603cba">
+    <meta name="theme-color" content="#ffffff"> 
+</head>
+<body>
+    <div class="loader-container">
+        <div id="loader"></div>
+    </div>
+    <script src="../script/lottie.js"></script>
+    <script src="../script/loader.js"></script>
+    <div class="navigation"></div>
+    <nav class="bars">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+    </nav>
+    <audio src="../audio/song.mp3" autoplay loop></audio>
+    <div class="equalizer">
+        <div class="bar bar-1"></div>
+        <div class="bar bar-2"></div>
+        <div class="bar bar-3"></div>
+        <div class="bar bar-4"></div>
+        <div class="bar bar-5"></div>
+    </div>
     <header>
         <h1>Showtimes</h1>
     </header>
@@ -82,6 +117,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFtnhNfjGErlA4OP1OjJWQaoGPKSq9OzI&region=Fr
 &callback=initMap"
     async defer></script>
+    <script src="../script/Mobile.js"></script>
     <script src="../script/Nav.js"></script>
     <script src="../script/script.js"></script>
     <script src="../script/main.js"></script>

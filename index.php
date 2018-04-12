@@ -22,6 +22,11 @@
 </head>
 
 <body class="homepage">
+    <div class="loader-container">
+        <div id="loader"></div>
+    </div>
+    <script src="./script/lottie.js"></script>
+    <script src="./script/loader.js"></script>
     <nav class="bars">
         <div class="bar1"></div>
         <div class="bar2"></div>
@@ -55,7 +60,6 @@
 
     <script src="script/Nav.js"></script>
     <script src="script/script.js"></script>
-    <script src="script/Loader.js"></script>
     <script src="script/Audio.js"></script>
     <script src="script/main.js"></script>
 </html>

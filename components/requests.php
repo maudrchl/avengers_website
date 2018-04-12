@@ -104,16 +104,4 @@ function getHeroInfos($hero_id, $marvel_id)
 
     return $result;
 }
-
-/*
-echo '<pre>';
-print_r(getActorInfos(3223));
-echo '</pre>';
-*/
-
-/*
-echo '<pre>';
-print_r(getHeroInfos(70));
-echo '</pre>';
-*/
 ?>

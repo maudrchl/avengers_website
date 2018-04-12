@@ -70,10 +70,10 @@
         <p><span class="bold">FIRST APPEARANCE</span> : <?= $hero_infos->origin?></p>
     </div>
     <!-- actor content -->
-    <div class="hero-image js-actor hidden">
-        <img class="normal-image js-lazy-load" src="../images/hero_actor/actor_<?= $id?>.png" alt="<?= $hero_infos->name?>">
-        <img class="color-image-1 js-lazy-load" src="../images/hero_actor/actor_<?= $id?>.png" alt="<?= $hero_infos->name?>">
-        <img class="color-image-2 js-lazy-load" src="../images/hero_actor/actor_<?= $id?>.png" alt="<?= $hero_infos->name?>">
+    <div class="hero-image js-actor hidden js-lazy-load">
+        <img class="normal-image" src="../images/hero_actor/actor_<?= $id?>.png" alt="<?= $hero_infos->name?>">
+        <img class="color-image-1" src="../images/hero_actor/actor_<?= $id?>.png" alt="<?= $hero_infos->name?>">
+        <img class="color-image-2" src="../images/hero_actor/actor_<?= $id?>.png" alt="<?= $hero_infos->name?>">
     </div>
     <div class="content js-actor hidden">
         <div class="name-container">
@@ -105,6 +105,7 @@
 
     <div class="red-background"></div>
 
+    <script src="../script/Mobile.js"></script>
     <script src="../script/Nav.js"></script>
     <script src="../script/Audio.js"></script>
     <script src="../script/LazyLoading.js"></script>

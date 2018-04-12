@@ -1,3 +1,7 @@
+if(typeof Mobile == "function"){
+    const mobile = new Mobile()
+}
+
 if(Nav){
     const nav = new Nav()
 }

@@ -406,7 +406,7 @@ body.hero-page {
         clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
         transition: clip-path 1s cubic-bezier(0.7, 0.09, 0.26, 0.94) 0.2s; }
     body.hero-page .hero-image.js-character.hidden {
-      transform: translateX(-60vw); }
+      transform: translateX(-70vw); }
     body.hero-page .hero-image.js-actor.hidden {
       transform: translateX(80vw); }
   body.hero-page .content {
@@ -536,7 +536,8 @@ html.gallery-page {
   height: 120vh;
   transform: translateY(-10vh);
   will-change: transform;
-  filter: none !important; }
+  filter: none !important;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 100px) 100%, 0 100%); }
 
 div.content {
   position: absolute;
@@ -571,7 +572,8 @@ div.content {
 .explosion {
   width: 900px;
   bottom: 100px;
-  left: 3000px;
+  left: 2500px;
+  pointer-events: none;
   filter: none !important; }
 
 .fog {
@@ -579,6 +581,7 @@ div.content {
   width: 1000px;
   left: 500px;
   bottom: 0;
+  pointer-events: none;
   filter: none !important; }
 
 .hero_0 {
@@ -653,6 +656,7 @@ div.content {
   top: 100px;
   left: 30px;
   z-index: 8;
+  pointer-events: none;
   filter: none !important; }
 
 .rock {
@@ -661,6 +665,7 @@ div.content {
   top: 550px;
   left: 2200px;
   z-index: 20;
+  pointer-events: none;
   filter: grayscale(100%) !important; }
 
 .share {
@@ -912,3 +917,31 @@ main {
     overflow: hidden;
     transform: translate3d(0, 0, 0);
     text-align: center; }
+
+.disclaimer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0F0F0F;
+  z-index: 800; }
+  .disclaimer img {
+    display: inline-block;
+    position: absolute;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 850; }
+  .disclaimer p {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 900;
+    font-family: Trade, Arial;
+    font-size: 18px;
+    text-align: center;
+    color: #ffffff; }
