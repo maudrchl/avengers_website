@@ -1,110 +1,63 @@
-// smoke canvas
-const smoke = new Image();
-smoke.src = 'http://s4.postimg.org/atxdou6u1/smoke.png';
+// handle the cool cursor
+const $cursor = document.querySelector('.cursor')
+const $insideCursor = document.querySelector('.inside_cursor')
+let radius = 40
+let cursorX = 4
+let cursorY = 4
+const event = 0
 
-$.fn.emitter = function(opts){
-  const particles = [];
-  const canvases = [];
+const mouse = {
+  x: 0,
+  y: 0
+}
 
-  const particle = function(canvas){
-    let x, y, size, speedX, speedY, opacity;
-    reset();
-    
-    this.update = function(){
-      if(opacity > 0){
-        opacity -= (Math.random() / opts.speed.fade);
-      }
+document.addEventListener('mousemove', (event) => {
+  mouse.x = event.clientX - 6
+  mouse.y = event.clientY - 6
 
-      if(opacity <= 0){
-        reset();
-      }
-      
-      speedX -= Math.random() / opts.speed.acceleration;
-      speedY -= Math.random() / opts.speed.acceleration;
-      x += speedX;
-      y += speedY;
-      size += Math.random();
-      drawParticle(x, y, size, opacity);
-    };
+})
 
-    function drawParticle(x, y, size, opacity){
-      canvas.globalAlpha = opacity;
-      canvas.drawImage(smoke, 0, 0, opts.size, opts.size, x, y, size, size);
-    }
+const loop = (event) => {
+  window.requestAnimationFrame(loop)
 
-    function reset(){
-      x = opts.x;
-      y = opts.y;
-      size = opts.size;
-      speedX = Math.random() * opts.speed.x;
-      speedY = Math.random() * opts.speed.y;
-      opacity = Math.random();
-    }
-  };
+  const newCursorX = cursorX + (mouse.x - cursorX) * 0.1
+  const newCursorY = cursorY + (mouse.y - cursorY) * 0.1
 
-  const canvas = function(el){
-    const canvas = el[0].getContext('2d');
+  const distanceX = newCursorX - cursorX
+  const distanceY = newCursorY - cursorY
 
-    canvas.width = el.width();
-    canvas.height = el.height();
+  cursorX = newCursorX
+  cursorY = newCursorY
 
-    for(let c = 0; c < opts.particles; c++){
-      particles.push(new particle(canvas));
-    }
+  const scale = 1 + Math.hypot(distanceX, distanceY) / 15
 
-    this.clear = function(){
-      canvas.clearRect(0, 0, canvas.width, canvas.height);
-    };
-  };
+  $cursor.style.transform = `translateX(${cursorX}px) translateY(${cursorY}px) scale(${scale})`
+}
+loop()
 
-  $(this).each(function(){
-    canvases.push(new canvas($(this)));
-  });
+// cool cursor 2
+const $cursorPoint = document.querySelector('.cursor-fixed')
+let cursorPointX = 0
+let cursorPointY = 0
 
-  function render(){
-    canvases.forEach(function(canvas){
-      canvas.clear();
-    });
+let mousePointX = 0
+let mousePointY = 0
 
-    particles.forEach(function(particle){
-      particle.update();
-    });
-    
-    window.requestAnimationFrame(render);
-  }
-  return {
-    render: render
-  }
-};
+document.addEventListener('mousemove', (event2) => {
+  mousePointX = event2.clientX - 3
+  mousePointY = event2.clientY - 3
+  $cursorPoint.style.transform = `translateX(${mousePointX}px) translateY(${mousePointY}px)`
+})
 
-$('canvas').emitter({
-  x: 600,
-  y: 0,
-  size: 70,
-  particles: 200,
-  speed: {
-    x: -2,
-    y: 2.5,
-    fade: 150,
-    acceleration: 200
-  }
-}).render();
+document.addEventListener('mousedown', (event) => {
+  $cursor.style.width = '50px'
+  $cursor.style.height = '50px'
+  $cursor.style.transition = 'width 0.2s ease-in-out, height 0.2s ease-in-out'
+})
+document.addEventListener('mouseup', (event) => {
+  setTimeout(() => {
 
-(function() {
-  function scrollHorizontally(e) {
-    e = window.event || e;
-    const delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-    document.documentElement.scrollLeft -= (delta*40)
-    document.body.scrollLeft -= (delta*40)
-    e.preventDefault();
-  }
-  if (window.addEventListener) {
-    // IE9, Chrome, Safari, Opera
-    window.addEventListener("mousewheel", scrollHorizontally, false);
-    // Firefox
-    window.addEventListener("DOMMouseScroll", scrollHorizontally, false);
-  } else {
-    // IE 6/7/8
-    window.attachEvent("onmousewheel", scrollHorizontally);
-  }
-})();
+    $cursor.style.width = '30px'
+    $cursor.style.height = '30px'
+  }, 100)
+})

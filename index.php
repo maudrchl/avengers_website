@@ -47,13 +47,14 @@
         <h3 class="release">Release on</h3>
         <h3 class="release date">25 april</h3>
     </div>
-    <div class="spinner"></div>
+    <a href="components/gallery.php"><div class="spinner"></div></a>
     <img src=images/arrow.svg class="arrow" width=200px>
     <span class="discover">discover</span>
     
     </body>
 
     <script src="script/Nav.js"></script>
+    <script src="script/script.js"></script>
     <script src="script/Loader.js"></script>
     <script src="script/Audio.js"></script>
     <script src="script/main.js"></script>

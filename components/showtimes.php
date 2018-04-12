@@ -83,6 +83,7 @@
 &callback=initMap"
     async defer></script>
     <script src="../script/Nav.js"></script>
+    <script src="../script/script.js"></script>
     <script src="../script/main.js"></script>
 </body>
 </html>

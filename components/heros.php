@@ -109,6 +109,7 @@
     <script src="../script/Audio.js"></script>
     <script src="../script/LazyLoading.js"></script>
     <script src="../script/HeroSwitch.js"></script>
+    <script src="../script/script.js"></script>
     <script src="../script/main.js"></script>
 </body>
 </html>
