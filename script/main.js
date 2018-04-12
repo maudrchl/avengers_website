@@ -25,3 +25,7 @@ if(typeof Audio == "function"){
 if(typeof ScrollParallax == "function"){
     const scrollParallax = new ScrollParallax()
 }
+
+if(typeof ScrollPop == "function"){
+    const scrollPop = new ScrollPop()
+}

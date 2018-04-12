@@ -1,65 +1,108 @@
-.anecdotes-background
-{
-    width: 100%;
+header.annecdotes{
+    height: 80vh;
+    background: url('../images/anecdotes/background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .overlay{
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .text{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            h1{
+                font-family: $trade;
+                font-size: $title;
+                text-align: center;
+            }
+
+            h2{
+                width: 100%;
+                margin-top: 0;
+                text-align: right;
+                font-family: $trade;
+                font-size: $big_text;
+            }
+        }
+    }
 }
 
-.content-background
-{
-    position: absolute;
-    width: 100%;
-    height: 40vh;
-    top: 40%;
-    z-index: 4;
-}
-
-.subtitle_anecdotes
-{
-    margin-left: 210px;
-}
-
-.black-block
-{
-    width: 100%;
-    height: 502px;
-    background: black;
-    opacity: 0.4;
-    position: absolute;
-    top:0;
-    left:0;
+main.container{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .main-anecdotes
 {
+    display: flex;
+    align-items: center;
     width: 90%;
-    height: 600px;
-    margin: 0 auto;
+    margin: 50px auto;
 
-    .first-img
+    .fluid-container
     {
-        margin-top: 50px;
-        margin-left: 100px;
-        display: inline-block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        overflow: hidden;
+        
+        img{
+            
+        }
     }
 
-    .title-anecdotes
-    {
-        font-size: 46px;
-        font-family: Trade, Arial;
-        display: inline-block;
-        position: absolute;
-        margin-top: 70px;
+    .text-box{
         margin-left: 60px;
+
+        .title-anecdotes
+        {
+            font-size: 46px;
+            font-family: Trade, Arial;
+        }
+
+        .text-anecdotes
+        {
+            font-family: Gotham_Book, Arial;
+            font-size: 16px;
+            margin-top: 20px;
+            color: $grey;
+            width: 400px;
+            display: inline-block;
+            line-height: 1.5;
+        }
     }
 
-    .text-anecdotes
-    {
-        font-family: Gotham_Book, Arial;
-        font-size: 16px;
-        color: $grey;
-        width: 400px;
-        display: inline-block;
-        margin-left: 60px;
-        padding-top: 140px;
-        line-height: 1.5;
+    &.half{
+        width: 40%;
+        flex-direction: column;
+
+        .fluid-container{
+            width: 100%;
+        }
+
+        .text-box{
+            margin-top: 20px;
+            margin-left: 0;
+        }
+    }
+
+    &.js-scrollpop{
+        transform: translate(100px);
+        opacity: 0;
+        transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+        will-change: transform;
+        &:nth-child(2n){
+            transform: translate(-100px);
+        }
     }
 }

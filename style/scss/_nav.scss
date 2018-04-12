@@ -4,8 +4,6 @@ nav
     top: 60px;
     left: 100px;
     z-index: 800;
-    width: 20px;
-    height: 20px;
     cursor: pointer;
     transition: transform 0.5s ease-in-out;
     z-index: 300;
@@ -98,6 +96,12 @@ nav:hover .bar2
     font-size: 36px;
     margin-left: 200px;
     margin-top: 20px;
+    will-change: transform;
+    transition: transform 0.4s ease-in-out;
+
+    &:hover{
+        transform: translateX(20px);
+    }
 }
 
 .title a
