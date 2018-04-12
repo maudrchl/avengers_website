@@ -24,6 +24,27 @@ main{
         height: calc(40vw - 50px);
         background: $red;
     }
+
+    .zipcode
+    {
+        border: 1px solid black;
+        margin-left: 60px;
+        margin-bottom: 30px;
+    }
+
+    .submit
+    {
+        padding: 7px 10px 20px 10px;
+        background: $red;
+        color:white;
+        font-family: Gotham_Bold, Arial;
+        cursor: pointer;
+    }
+    
+    .zipcode::placeholder
+    {
+        font-family: Gotham_Book, Arial;
+    }
     
     .cinema{
         margin-left: 50px;

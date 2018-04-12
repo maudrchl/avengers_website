@@ -1,6 +1,7 @@
 <?php
     include('config.php');
     include('showtimes_request.php');
+    include('nav.php');
 
     $zip = $_GET['zip'];
     $date = date('Y-m-d', time());
@@ -20,6 +21,10 @@
     <div class='map' id='map'>
     </div>
         <div class='cinemas'>
+            <form action="#" method="POST">
+                <input type ="text" class="zipcode" placeholder="ZIP code of the city"></input>
+                <input type="submit" class="submit" value="OK">
+            </form>
             <?php foreach($showtimes as $cinema){?>
             <div class="cinema">
                 <h2 class="name"><?= $cinema['name']?></h2>

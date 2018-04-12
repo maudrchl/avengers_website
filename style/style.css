@@ -669,6 +669,18 @@ main {
     width: calc(40vw - 50px);
     height: calc(40vw - 50px);
     background: #EE0000; }
+  main .zipcode {
+    border: 1px solid black;
+    margin-left: 60px;
+    margin-bottom: 30px; }
+  main .submit {
+    padding: 7px 10px 20px 10px;
+    background: #EE0000;
+    color: white;
+    font-family: Gotham_Bold, Arial;
+    cursor: pointer; }
+  main .zipcode::placeholder {
+    font-family: Gotham_Book, Arial; }
   main .cinema {
     margin-left: 50px;
     margin-bottom: 20px;
