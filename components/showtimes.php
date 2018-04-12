@@ -25,7 +25,9 @@
                 <input type ="text" class="zipcode" placeholder="ZIP code of the city"></input>
                 <input type="submit" class="submit" value="OK">
             </form>
-            <?php foreach($showtimes as $cinema){?>
+            <?php if($showtimes == []){ ?>
+                <p class="error">No showtime found...</p>
+            <?php } else{ foreach($showtimes as $cinema){ ?>
             <div class="cinema">
                 <h2 class="name"><?= $cinema['name']?></h2>
                 <span class="address"><?= $cinema['address'].', '.$cinema['city']?></span>
@@ -41,7 +43,7 @@
                     <?php } ?>
                 </div>
             </div>
-            <?php }?>
+            <?php }}?>
         </div>
     </main>
     <script>

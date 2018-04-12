@@ -51,31 +51,34 @@ function getShowtimes($day, $zip_code)
     foreach($theatres_ids as $id){
         $showtimes = [];
 
-        $showtimes_result = (array)$showtimes_results->showtimes->$id;
-        $showtimes_ids = array_keys($showtimes_result);
         
-        foreach($showtimes_ids as $show_id){
-            foreach($showtimes_result[$show_id]->{'218265'} as $show){
-                foreach($show->showtimes as $real_show){
-                    $showtime_datas = [
-                        'time' => parseTime($real_show->showStart),
-                        'ticket' => $real_show->urlTicketing,
-                    ];
-                    array_push($showtimes, $showtime_datas);
+        if(property_exists((object)$showtimes_results->showtimes, $id)){
+
+            $showtimes_result = (array)$showtimes_results->showtimes->$id;
+            $showtimes_ids = array_keys($showtimes_result);
+        
+            foreach($showtimes_ids as $show_id){
+                foreach($showtimes_result[$show_id]->{'218265'} as $show){
+                    foreach($show->showtimes as $real_show){
+                        $showtime_datas = [
+                            'time' => parseTime($real_show->showStart),
+                            'ticket' => $real_show->urlTicketing,
+                        ];
+                        array_push($showtimes, $showtime_datas);
+                    }
                 }
             }
+
+            $theatre_datas = [
+                'name' => $theatres_result[$id]->name,
+                'address' => $theatres_result[$id]->address->address,
+                'city' => $theatres_result[$id]->address->city,
+                'showtimes' => $showtimes,
+            ];
+            array_push($result, $theatre_datas);
         }
-
-        $theatre_datas = [
-            'name' => $theatres_result[$id]->name,
-            'address' => $theatres_result[$id]->address->address,
-            'city' => $theatres_result[$id]->address->city,
-            'showtimes' => $showtimes,
-        ];
-        array_push($result, $theatre_datas);
     }
-
-
+    
     return $result;
 }
 /*
