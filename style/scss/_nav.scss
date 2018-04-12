@@ -227,3 +227,40 @@ nav:hover .bar2
     background: white;
 }
 
+.socials_share
+{
+    text-decoration: none;
+}
+
+body{
+    cursor: none;
+    #active {
+        animation: click 2s linear;
+    }
+    
+    @keyframes click {
+        0% {transform: scale(1)}
+        50% {transform: scale(2)}
+        100% {transform: scale(1)}
+    }
+
+  .cursor {
+    position: absolute;
+    width:22px;
+    height: 22px;
+    border-radius: 45px;
+    z-index: 9998;
+    pointer-events: none;
+    background: #E4E4E4;
+  }
+
+    .cursor-fixed {
+        pointer-events: none;
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        border-radius: 45px;
+        z-index: 9999;
+        background: #E4E4E4;
+    }
+}

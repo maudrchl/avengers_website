@@ -33,3 +33,7 @@
         <li>Forum</li>
     </ul>
 </div>
+<div class="cursor-fixed"></div>
+<div class="cursor">
+    <div class="inside_cursor"></div>
+</div>
