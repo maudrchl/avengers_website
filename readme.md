@@ -2,7 +2,7 @@
 
 *This repository is a promotionnal website for the movie Avengers : Infinity War. It has been done during a one week school project*
 
-[Online website](https://klapdesign.fr/avengers/avengers_website/)
+[Online website](https://klapdesign.fr/avengers)
 [Github repositoty](https://github.com/maudrochel/avengers_website)
 
 ## Installation
