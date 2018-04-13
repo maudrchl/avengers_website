@@ -15,7 +15,7 @@ class Mobile{
             const $logo = document.createElement('img')
             const $text = document.createElement('p')
             $text.innerText="Sorry, this experience is not available for your resolution."
-            $logo.src = '../images/logo.svg'
+            $logo.src = './images/logo.svg'
             $disclaimer.appendChild($logo)
             $disclaimer.appendChild($text)
 
