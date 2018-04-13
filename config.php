@@ -5,6 +5,7 @@ define('MOVIEDB_KEY', '17585dc135dd3774be90d8e921d64fd1');
 define('SUPERHERO_KEY', '1573083546094106');
 define('MARVEL_PUBLIC','a6355bf0ea4d86c77f1af2ef45aa6e66');
 define('MARVEL_PRIVATE','27cd970943f92e68fffb42a87f1bbbdd5e32ad83');
+define('GOOGLE_KEY','AIzaSyBFtnhNfjGErlA4OP1OjJWQaoGPKSq9OzI');
 
 //DATABASE LOGIN
 define('DB_NAME', 'avengers_database');

@@ -23,6 +23,7 @@
 - Calls to google maps API
 - Calls to google maps API
 - Interception of an Allociné request
+- Requests to our database
 
 ## Front-end
 - Super sweet design

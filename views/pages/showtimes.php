@@ -4,7 +4,8 @@
     $zip = $_GET['zip'];
     $date = date('Y-m-d', time());
 
-    $query = file_get_contents('http://maps.googleapis.com/maps/api/geocode/json?address='.$zip.'&region=fr');
+    $query = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?address='.$zip.'&region=fr&key='.GOOGLE_KEY);
+
     $query = json_decode($query);
     $position = '{lat: '.$query->results[0]->geometry->location->lat.', lng: '.$query->results[0]->geometry->location->lng.'}';
 
@@ -12,8 +13,8 @@
 
     $array_theatres = array();
     for ($i = 0; $i < sizeof($showtimes); $i++){
-        $adress = $showtimes[$i]['address'];
-        $query2 = file_get_contents('http://maps.googleapis.com/maps/api/geocode/json?address='.$adress.'&region=fr');
+        $adress = urlencode($showtimes[$i]['address']);
+        $query2 = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?address='.$adress.'&region=fr&key='.GOOGLE_KEY);
         $query2 = json_decode($query2);
 
         $position_theatres = '{lat: '.$query2->results[0]->geometry->location->lat.', lng: '.$query2->results[0]->geometry->location->lng.'}';
