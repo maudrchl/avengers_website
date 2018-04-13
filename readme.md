@@ -7,7 +7,7 @@
 
 ## Installation
 - Run PHP and mySQL servers
-- Upload characters.sql in your mySQL database
+- Upload avengers_database.sql in your mySQL database
 - Edit config.php if needed
 
 ## Features
