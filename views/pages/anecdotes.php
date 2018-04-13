@@ -1,3 +1,9 @@
+
+    <div class="navigation"></div>
+    <nav class="bars">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+    </nav>
 <header class="annecdotes">
     <div class="overlay">
         <div class="text">
@@ -90,5 +96,6 @@
         </div>
     </div>  
 </main>
+<script src="script/ScrollPop.js"></script>
 </body>
 

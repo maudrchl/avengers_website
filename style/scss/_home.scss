@@ -60,18 +60,6 @@ h2
     margin-top: -120px;
 }
 
-.red_block
-{
-    width: 180px;
-    height: 60px;
-    background: $red;
-    position: absolute;
-    top: 170px;
-    left: 740px;
-    z-index: 1;
-
-}
-
 .release
 {
     font-family: Trade, Arial;
@@ -80,9 +68,11 @@ h2
     text-transform: uppercase;
     color: white;
     margin-top: 100px;
-    position: absolute;
-    top: 75px;
-    left: 510px;
+
+    span{
+        background: red;
+        padding: 0 10px;
+    }
 }
 
 .date
@@ -91,47 +81,51 @@ h2
     z-index: 4;
 }
 
-.arrow
-{
+.discover-link{
     position: absolute;
-    top: 635px;
-    right: 220px;
-}
+    bottom: 100px;
+    right: 100px;
+    width: 300px;
 
-.discover
-{
-    position: absolute;
-    top: 620px;
-    right: 360px;
-    color: white;
-    font-size: 20px;
-    font-family: Trade, arial;
-}
+    .arrow
+    {
+        position: absolute;
+        top: -5px;
+        left: 0;
+    }
 
-.spinner{
-    width: 80px;
-    height: 80px;
-    border: 3px solid #ddd;
-    border-top: 4px solid #EE0000;
-    border-radius: 100%;
-    position: absolute;
-    top: 600px;
-    left: 1000px;
-    right: 0;
-    margin: auto;
-    animation: spinner 1s infinite linear;
-    z-index: 430;
-    cursor: pointer;
-  }
+    .discover
+    {
+        position: absolute;
+        top: -20px;
+        left: 0;
+        color: white;
+        font-size: 20px;
+        font-family: Trade, arial;
+    }
+
+    .spinner{
+        width: 80px;
+        height: 80px;
+        border: 3px solid #ddd;
+        border-top: 4px solid #EE0000;
+        border-radius: 100%;
+        position: absolute;
+        top: -40px;
+        right: 0px;
+        animation: spinner 1s infinite linear;
+        z-index: 430;
+        cursor: pointer;
+    }
 
   
-  .spinner:hover { 
-    transform: rotate(360deg);
-    transition: 1s;
+    .spinner:hover { 
+        transform: rotate(360deg);
+        transition: 1s;
+    }
 }
 
-
-  #overlay{
+#overlay{
     height: 100%;
     width: 100%;
     background: rgba(0,0,0, 0.8);

@@ -46,61 +46,52 @@ h2 {
   color: white;
   margin-top: -120px; }
 
-.red_block {
-  width: 180px;
-  height: 60px;
-  background: #EE0000;
-  position: absolute;
-  top: 170px;
-  left: 740px;
-  z-index: 1; }
-
 .release {
   font-family: Trade, Arial;
   font-size: 50px;
   text-align: center;
   text-transform: uppercase;
   color: white;
-  margin-top: 100px;
-  position: absolute;
-  top: 75px;
-  left: 510px; }
+  margin-top: 100px; }
+  .release span {
+    background: red;
+    padding: 0 10px; }
 
 .date {
   left: 750px;
   z-index: 4; }
 
-.arrow {
+.discover-link {
   position: absolute;
-  top: 635px;
-  right: 220px; }
-
-.discover {
-  position: absolute;
-  top: 620px;
-  right: 360px;
-  color: white;
-  font-size: 20px;
-  font-family: Trade, arial; }
-
-.spinner {
-  width: 80px;
-  height: 80px;
-  border: 3px solid #ddd;
-  border-top: 4px solid #EE0000;
-  border-radius: 100%;
-  position: absolute;
-  top: 600px;
-  left: 1000px;
-  right: 0;
-  margin: auto;
-  animation: spinner 1s infinite linear;
-  z-index: 430;
-  cursor: pointer; }
-
-.spinner:hover {
-  transform: rotate(360deg);
-  transition: 1s; }
+  bottom: 100px;
+  right: 100px;
+  width: 300px; }
+  .discover-link .arrow {
+    position: absolute;
+    top: -5px;
+    left: 0; }
+  .discover-link .discover {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    color: white;
+    font-size: 20px;
+    font-family: Trade, arial; }
+  .discover-link .spinner {
+    width: 80px;
+    height: 80px;
+    border: 3px solid #ddd;
+    border-top: 4px solid #EE0000;
+    border-radius: 100%;
+    position: absolute;
+    top: -40px;
+    right: 0px;
+    animation: spinner 1s infinite linear;
+    z-index: 430;
+    cursor: pointer; }
+  .discover-link .spinner:hover {
+    transform: rotate(360deg);
+    transition: 1s; }
 
 #overlay {
   height: 100%;
@@ -420,14 +411,15 @@ body.hero-page {
     color: #ffffff;
     overflow-y: scroll; }
     body.hero-page .content .name-container {
-      overflow-y: hidden; }
+      overflow: hidden; }
       body.hero-page .content .name-container h1 {
         font-size: 100px;
         font-family: Trade, Arial;
         text-transform: uppercase;
         will-change: transform;
         transition: transform 0.4s cubic-bezier(0.7, 0.09, 0.26, 0.94);
-        text-align: left; }
+        text-align: left;
+        overflow: hidden; }
     body.hero-page .content h3 {
       font-size: 28px;
       margin-top: 60px;

@@ -3,6 +3,7 @@
     include "views/partials/nav.php";
     include "config.php";
 
+    if(isset($_GET['q'])){
     switch($_GET['q']) {
         case '':
             include "views/pages/home.php";
@@ -25,6 +26,9 @@
         default:
             include "views/pages/404.php";
             break;
+    }
+    } else{
+        include "views/pages/home.php";
     }
     
     include "views/partials/footer.php";

@@ -21,6 +21,15 @@
         array_push($array_theatres, $position_theatres);
     }
 ?>
+    <div class="loader-container">
+        <div id="loader"></div>
+    </div>
+    <script src="script/lottie.js"></script>
+    <script src="script/loader.js"></script>
+    <nav class="bars">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+    </nav>
     <header>
         <h1>Showtimes</h1>
     </header>
@@ -79,8 +88,5 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFtnhNfjGErlA4OP1OjJWQaoGPKSq9OzI&region=Fr
 &callback=initMap"
     async defer></script>
-    <script src="../script/Nav.js"></script>
-    <script src="../script/script.js"></script>
-    <script src="../script/main.js"></script>
 </body>
 </html>

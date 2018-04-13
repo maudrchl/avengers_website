@@ -4,20 +4,11 @@
     </div>
     <script src="script/lottie.js"></script>
     <script src="script/loader.js"></script>
-    <script src="script/Scroller.js"></script>
     <div class="navigation"></div>
     <nav class="bars">
         <div class="bar1"></div>
         <div class="bar2"></div>
     </nav>
-    <audio src="audio/song.mp3" autoplay loop></audio>
-    <div class="equalizer">
-        <div class="bar bar-1"></div>
-        <div class="bar bar-2"></div>
-        <div class="bar bar-3"></div>
-        <div class="bar bar-4"></div>
-        <div class="bar bar-5"></div>
-    </div>
     <main class="sliding">
     <img src="images/land.jpg" class = "background js-parallax" data-amplitude="0.1"> 
     <div class="gallery content">
@@ -40,11 +31,12 @@
         <div class="share">
             <h3 class="showtimes_gallery">Showtimes</h3>
             <p class="txt-showtimes">Discover the showtimes of Avengers near you.</p>
-            <form action="showtimes.php" method="GET" class="form_gallery">
+            <form action="showtimes" method="GET" class="form_gallery">
                 <input type ="text" name="zip" class="zipcode" placeholder="City or Zipcode"></input>
                 <input type="submit" name="submit" class="submit" value="OK">
             </form>
         <div>
     </div>
     </main>
+    <script src="script/Scroller.js"></script>
 </body>

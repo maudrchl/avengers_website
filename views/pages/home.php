@@ -25,11 +25,11 @@
     <div class="txt_background">
         <h2>Infinity War</h2>
         <h1>Avengers</h1>
-        <div class="red_block"></div>
-        <h3 class="release">Release on</h3>
-        <h3 class="release date">25 april</h3>
+        <h3 class="release">Release on <span>25 april</span></h3>
     </div>
-    <a href="./gallery"><div class="spinner"></div></a>
-    <img src=images/arrow.svg class="arrow" width=200px>
-    <span class="discover">discover</span>
+    <div class="discover-link"
+        <a href="./gallery"><div class="spinner"></div></a>
+        <img src=images/arrow.svg class="arrow" width=200px>
+        <span class="discover">discover</span>
+    </div>
 </body>

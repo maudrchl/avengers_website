@@ -15,11 +15,6 @@
     <meta name="theme-color" content="#ffffff"> 
 </head>
 <body>
-    <div class="navigation"></div>
-    <nav class="bars">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-    </nav>
     <audio src="audio/song.mp3" autoplay loop></audio>
     <div class="equalizer">
         <div class="bar bar-1"></div>

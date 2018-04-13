@@ -150,7 +150,7 @@ body.hero-page{
         overflow-y: scroll;
 
         .name-container{
-            overflow-y: hidden;
+            overflow: hidden;
 
             h1{
                 font-size: $title;
@@ -159,6 +159,7 @@ body.hero-page{
                 will-change: transform;
                 transition: transform 0.4s cubic-bezier(0.7, 0.09, 0.26, 0.94);
                 text-align: left;
+                overflow: hidden;
             }
         }
 
