@@ -13,6 +13,7 @@ class Audio{
     event(){
         this.equalizer.addEventListener('click', () =>
         {
+            console.log('huiubiufz')
             if (this.audio.paused)
             {
             this.audio.play()

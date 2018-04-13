@@ -30,7 +30,7 @@
         <?php for($hero_id = 0; $hero_id<count($id_list); $hero_id++){ 
             $hero_name = $id_list[$hero_id]->name ?>
             <li <?= $hero_id != $id ? '' : 'class=active' ?>>
-                <a href="./heros.php?id=<?= $hero_id?>"></a>
+                <a href="./heros?id=<?= $hero_id?>"></a>
                 <span><?= $hero_name ?></span>
             </li>
         <?php }?>
